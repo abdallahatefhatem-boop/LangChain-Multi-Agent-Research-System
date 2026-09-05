@@ -1,0 +1,18 @@
+[ 2026-09-05 14:53:23,201 ] root - INFO - Starting URL scraping for:  https://www.mtu.edu/data-science/undergraduate/ai/what-is
+[ 2026-09-05 14:53:23,201 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 14:53:23,202 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.mtu.edu:443
+[ 2026-09-05 14:53:23,707 ] urllib3.connectionpool - DEBUG - https://www.mtu.edu:443 "GET /data-science/undergraduate/ai/what-is HTTP/1.1" 301 None
+[ 2026-09-05 14:53:25,448 ] urllib3.connectionpool - DEBUG - https://www.mtu.edu:443 "GET /data-science/undergraduate/ai/what-is/ HTTP/1.1" 200 None
+[ 2026-09-05 14:53:25,687 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-05 14:53:25,708 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-05 14:53:25,710 ] trafilatura.main_extractor - DEBUG - (.//article)[1]
+[ 2026-09-05 14:53:25,715 ] trafilatura.readability_lxml - DEBUG - Top 5: div 64.51532526049
+[ 2026-09-05 14:53:25,715 ] trafilatura.readability_lxml - DEBUG - Top 5: div 34.52040551957195
+[ 2026-09-05 14:53:25,715 ] trafilatura.readability_lxml - DEBUG - Top 5: div 7.77
+[ 2026-09-05 14:53:25,715 ] trafilatura.readability_lxml - DEBUG - Top 5: div 6.385
+[ 2026-09-05 14:53:25,715 ] trafilatura.readability_lxml - DEBUG - Top 5: nav -2.19
+[ 2026-09-05 14:53:25,716 ] trafilatura.readability_lxml - DEBUG - Removed 64.515 ul with weight 0 cause it has too many links 0.972 for its weight 0.
+[ 2026-09-05 14:53:25,716 ] trafilatura.readability_lxml - DEBUG - Removed 64.515 ul with weight 0 cause it has too many links 0.276 for its weight 0.
+[ 2026-09-05 14:53:25,716 ] trafilatura.external - DEBUG - extracted length: 3047 (algorithm) 18805 (extraction)
+[ 2026-09-05 14:53:25,716 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-05 14:53:25,719 ] root - INFO - Successfully extracted content using Trafilatura.
