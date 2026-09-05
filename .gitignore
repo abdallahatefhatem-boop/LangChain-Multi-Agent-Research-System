@@ -1,0 +1,5 @@
+.venv
+.vscode
+.env
+.ipynb_checkpoints
+# .env.example
