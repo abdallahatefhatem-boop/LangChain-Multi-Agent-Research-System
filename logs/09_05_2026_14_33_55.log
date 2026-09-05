@@ -1,0 +1,6 @@
+[ 2026-09-05 14:33:55,822 ] root - INFO - get tavily api key....
+[ 2026-09-05 14:34:52,993 ] root - INFO - used tavily api key 
+[ 2026-09-05 14:34:52,994 ] root - INFO - getting response....
+[ 2026-09-05 14:34:53,034 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.tavily.com:443
+[ 2026-09-05 14:34:53,602 ] urllib3.connectionpool - DEBUG - https://api.tavily.com:443 "POST /search HTTP/1.1" 401 64
+[ 2026-09-05 14:34:53,604 ] root - INFO - reuturn response
