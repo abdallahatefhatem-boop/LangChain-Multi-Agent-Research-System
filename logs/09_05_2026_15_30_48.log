@@ -1,0 +1,29 @@
+[ 2026-09-05 15:30:48,481 ] root - INFO - get tavily api key....
+[ 2026-09-05 15:30:48,482 ] root - INFO - used tavily api key 
+[ 2026-09-05 15:30:48,561 ] root - INFO - Loading API key for OpenRouter...
+[ 2026-09-05 15:30:48,678 ] root - INFO - LLM initialized successfully via ChatOpenRouter.
+[ 2026-09-05 15:30:48,678 ] root - INFO - building search agent ....
+[ 2026-09-05 15:30:48,678 ] root - INFO - Done build search agent
+[ 2026-09-05 15:30:48,678 ] root - INFO - building reader agent .....
+[ 2026-09-05 15:30:48,678 ] root - INFO - Done build reader agent
+[ 2026-09-05 15:30:48,678 ] root - INFO - Loading prompt configurations from YAML file...
+[ 2026-09-05 15:30:48,679 ] root - INFO - Successfully loaded prompts configuration.
+[ 2026-09-05 15:30:48,679 ] root - INFO - Successfully initialized Writer and Critic chains.
+[ 2026-09-05 15:30:48,679 ] root - INFO - Starting multi-agent research pipeline for topic: 'Artificial Intelligence in Healthcare'
+[ 2026-09-05 15:30:48,679 ] root - INFO - Step 1/4: Executing Search Agent...
+[ 2026-09-05 15:30:48,919 ] httpcore.connection - DEBUG - connect_tcp.started host='openrouter.ai' port=443 local_address=None timeout=5.0 socket_options=None
+[ 2026-09-05 15:30:48,966 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7009c1173ec0>
+[ 2026-09-05 15:30:48,966 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7009c15a1ad0> server_hostname='openrouter.ai' timeout=5.0
+[ 2026-09-05 15:30:49,014 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7009c1173e60>
+[ 2026-09-05 15:30:49,014 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:30:49,015 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-05 15:30:49,015 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:30:49,015 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-05 15:30:49,015 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:30:50,007 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 429, b'Too Many Requests', [(b'Date', b'Sat, 05 Sep 2026 12:30:49 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'Retry-After', b'60'), (b'Access-Control-Expose-Headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'X-Generation-Id', b'gen-1788611449-TjmcE2KMDxVtSaVeedAq'), (b'set-cookie', b'__cf_bm=ae0Rcw4L_s6r2k5qhC3NQ4i8ZnP9fT5znAySpYBSKdA-1788611449.0414596-1.0.1.1-BykS.t9i8U_FUUrEu5WbbfDhu5tfLXiNU_TgQGtCYljdU1zwTE7NYcY4o2bMPCxoopdRl4_8dxwH0gZ_za1Y8ocu5c4N66RMW7x_sF44ViRa7CbezepWSubuDEICx4M_; HttpOnly; SameSite=None; Secure; Path=/; Domain=openrouter.ai; Expires=Sat, 05 Sep 2026 13:00:49 GMT'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a3653f548a7de23c-MRS')])
+[ 2026-09-05 15:30:50,010 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+[ 2026-09-05 15:30:50,011 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:30:50,011 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-05 15:30:50,012 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-05 15:30:50,012 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-05 15:30:50,033 ] root - ERROR - An error occurred during pipeline execution.

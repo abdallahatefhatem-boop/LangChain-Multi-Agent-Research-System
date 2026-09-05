@@ -1,0 +1,44 @@
+[ 2026-09-05 15:23:15,015 ] root - INFO - get tavily api key....
+[ 2026-09-05 15:23:15,016 ] root - INFO - used tavily api key 
+[ 2026-09-05 15:23:15,085 ] root - INFO - lodding api for llm .....
+[ 2026-09-05 15:23:15,086 ] root - INFO - Api key for llm loded
+[ 2026-09-05 15:23:15,197 ] root - INFO - building search agent ....
+[ 2026-09-05 15:23:15,197 ] root - INFO - Done build search agent
+[ 2026-09-05 15:23:15,197 ] root - INFO - building reader agent .....
+[ 2026-09-05 15:23:15,197 ] root - INFO - Done build reader agent
+[ 2026-09-05 15:23:15,197 ] root - INFO - Loading prompt configurations from YAML file...
+[ 2026-09-05 15:23:15,198 ] root - INFO - Successfully loaded prompts configuration.
+[ 2026-09-05 15:23:15,199 ] root - INFO - Successfully initialized Writer and Critic chains.
+[ 2026-09-05 15:23:15,199 ] root - INFO - Starting multi-agent research pipeline for topic: 'Artificial Intelligence in Healthcare'
+[ 2026-09-05 15:23:15,199 ] root - INFO - Step 1/4: Executing Search Agent...
+[ 2026-09-05 15:23:15,215 ] groq._base_client - DEBUG - Request options: {'method': 'post', 'url': '/openai/v1/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-63bde68c-816d-41c3-abf9-3cb358b827da', 'json_data': {'messages': [{'role': 'user', 'content': 'Find recent, reliable, and detailed information about: Artificial Intelligence in Healthcare'}], 'model': 'minimax/minimax-m3:free', 'n': 1, 'reasoning_effort': None, 'reasoning_format': None, 'service_tier': 'on_demand', 'stop': None, 'stream': False, 'temperature': 0.7, 'tools': [{'type': 'function', 'function': {'name': 'web_search', 'description': 'Search the web for recent and reliable information on a topic . Returns Titles , URLs and snippets.', 'parameters': {'properties': {'text': {'type': 'string'}}, 'required': ['text'], 'type': 'object'}}}]}}
+[ 2026-09-05 15:23:15,217 ] groq._base_client - DEBUG - Sending HTTP Request: POST https://api.groq.com/openai/v1/chat/completions
+[ 2026-09-05 15:23:15,218 ] httpcore.connection - DEBUG - connect_tcp.started host='api.groq.com' port=443 local_address=None timeout=None socket_options=None
+[ 2026-09-05 15:23:15,339 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x78230bd8fa40>
+[ 2026-09-05 15:23:15,340 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x78230bd9b550> server_hostname='api.groq.com' timeout=None
+[ 2026-09-05 15:23:15,401 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x78230bb0a3f0>
+[ 2026-09-05 15:23:15,402 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:23:15,402 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-05 15:23:15,403 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:23:15,403 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-05 15:23:15,403 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:23:15,478 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 401, b'Unauthorized', [(b'Date', b'Sat, 05 Sep 2026 12:23:15 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'96'), (b'Connection', b'keep-alive'), (b'Cache-Control', b'private, max-age=0, no-store, no-cache, must-revalidate'), (b'Server', b'cloudflare'), (b'vary', b'Origin'), (b'x-groq-region', b'fra'), (b'x-request-id', b'req_01m1rrbs7sekw81gptk5qe3a93'), (b'set-cookie', b'__cf_bm=rs7NdqlkRrRZFZY8FxZJpBnos6xkCq8SJKy.Zhp6n7o-1788610995.4339385-1.0.1.1-DNa1sEycy1XK08sc2jC.tAwtLRZIsjkdIJPUT.m.QfTcPjGUSxh2MRAyg3AiQFu.Y5Z8TTAOln3hywqvBup9ylVQ4eMgaWN1gIU3AlBOfFiI_HU5zHFoJoIFTYzKkEtV; HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Sat, 05 Sep 2026 12:53:15 GMT'), (b'via', b'1.1 google'), (b'Strict-Transport-Security', b'max-age=15552000'), (b'cf-cache-status', b'DYNAMIC'), (b'CF-RAY', b'a365344179f62d58-MRS'), (b'alt-svc', b'h3=":443"; ma=86400')])
+[ 2026-09-05 15:23:15,480 ] httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+[ 2026-09-05 15:23:15,480 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:23:15,480 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-05 15:23:15,481 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-05 15:23:15,481 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-05 15:23:15,481 ] groq._base_client - DEBUG - HTTP Response: POST https://api.groq.com/openai/v1/chat/completions "401 Unauthorized" Headers({'date': 'Sat, 05 Sep 2026 12:23:15 GMT', 'content-type': 'application/json', 'content-length': '96', 'connection': 'keep-alive', 'cache-control': 'private, max-age=0, no-store, no-cache, must-revalidate', 'server': 'cloudflare', 'vary': 'Origin', 'x-groq-region': 'fra', 'x-request-id': 'req_01m1rrbs7sekw81gptk5qe3a93', 'set-cookie': '__cf_bm=rs7NdqlkRrRZFZY8FxZJpBnos6xkCq8SJKy.Zhp6n7o-1788610995.4339385-1.0.1.1-DNa1sEycy1XK08sc2jC.tAwtLRZIsjkdIJPUT.m.QfTcPjGUSxh2MRAyg3AiQFu.Y5Z8TTAOln3hywqvBup9ylVQ4eMgaWN1gIU3AlBOfFiI_HU5zHFoJoIFTYzKkEtV; HttpOnly; SameSite=None; Secure; Path=/; Domain=groq.com; Expires=Sat, 05 Sep 2026 12:53:15 GMT', 'via': '1.1 google', 'strict-transport-security': 'max-age=15552000', 'cf-cache-status': 'DYNAMIC', 'cf-ray': 'a365344179f62d58-MRS', 'alt-svc': 'h3=":443"; ma=86400'})
+[ 2026-09-05 15:23:15,481 ] groq._base_client - DEBUG - Encountered httpx.HTTPStatusError
+Traceback (most recent call last):
+  File "/home/mg/my_venv/.venv/lib/python3.12/site-packages/groq/_base_client.py", line 1024, in request
+    response.raise_for_status()
+  File "/home/mg/my_venv/.venv/lib/python3.12/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '401 Unauthorized' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+[ 2026-09-05 15:23:15,484 ] groq._base_client - DEBUG - Not retrying
+[ 2026-09-05 15:23:15,484 ] groq._base_client - DEBUG - Re-raising status error
+[ 2026-09-05 15:23:15,486 ] root - ERROR - An error occurred during pipeline execution.
+[ 2026-09-05 15:23:15,659 ] httpcore.connection - DEBUG - close.started
+[ 2026-09-05 15:23:15,659 ] httpcore.connection - DEBUG - close.complete

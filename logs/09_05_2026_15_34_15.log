@@ -1,0 +1,1374 @@
+[ 2026-09-05 15:34:15,414 ] root - INFO - get tavily api key....
+[ 2026-09-05 15:34:15,415 ] root - INFO - used tavily api key 
+[ 2026-09-05 15:34:15,493 ] root - INFO - Loading API key for OpenRouter...
+[ 2026-09-05 15:34:15,575 ] root - INFO - LLM initialized successfully via ChatOpenRouter.
+[ 2026-09-05 15:34:15,575 ] root - INFO - building search agent ....
+[ 2026-09-05 15:34:15,575 ] root - INFO - Done build search agent
+[ 2026-09-05 15:34:15,575 ] root - INFO - building reader agent .....
+[ 2026-09-05 15:34:15,575 ] root - INFO - Done build reader agent
+[ 2026-09-05 15:34:15,575 ] root - INFO - Loading prompt configurations from YAML file...
+[ 2026-09-05 15:34:15,576 ] root - INFO - Successfully loaded prompts configuration.
+[ 2026-09-05 15:34:15,576 ] root - INFO - Successfully initialized Writer and Critic chains.
+[ 2026-09-05 15:34:15,576 ] root - INFO - Starting multi-agent research pipeline for topic: 'Artificial Intelligence in Healthcare'
+[ 2026-09-05 15:34:15,576 ] root - INFO - Step 1/4: Executing Search Agent...
+[ 2026-09-05 15:34:15,751 ] httpcore.connection - DEBUG - connect_tcp.started host='openrouter.ai' port=443 local_address=None timeout=5.0 socket_options=None
+[ 2026-09-05 15:34:15,821 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x74e91c0172f0>
+[ 2026-09-05 15:34:15,821 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x74e91c2a77d0> server_hostname='openrouter.ai' timeout=5.0
+[ 2026-09-05 15:34:15,879 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x74e91c0178f0>
+[ 2026-09-05 15:34:15,879 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:15,879 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-05 15:34:15,879 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:15,879 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-05 15:34:15,879 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:17,013 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 12:34:16 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788611656-zF9w6Qk54l36mrolXKnJ'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'set-cookie', b'__cf_bm=VW5V5diX6sG2WG00RhAZ2HZKrgC54diSYfI0PGblsHw-1788611655.912005-1.0.1.1-XQyMz9bLV_ogH9WuyNcmryJtclEdjAO478QtyMCGE4caAaxauKs3hnKiQAl_7SJRfRhbf5kkm534vOxw.Yld0iXldwi.W_8_mdnEAlzckksqKHE9J3D1zc4sLiJW.Y_G; HttpOnly; SameSite=None; Secure; Path=/; Domain=openrouter.ai; Expires=Sat, 05 Sep 2026 13:04:16 GMT'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a36544617bbc7b1f-MRS')])
+[ 2026-09-05 15:34:17,014 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-05 15:34:17,014 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:30,148 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-05 15:34:30,148 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-05 15:34:30,148 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-05 15:34:30,150 ] root - INFO - Search Agent completed successfully.
+[ 2026-09-05 15:34:30,150 ] root - INFO - Step 2/4: Executing Reader Agent (Scraping)...
+[ 2026-09-05 15:34:30,171 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:30,172 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-05 15:34:30,172 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:30,172 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-05 15:34:30,172 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:31,432 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 12:34:31 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788611670-QsQPSEq1iUCcThSIJUgP'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a36544bac8107b1f-MRS')])
+[ 2026-09-05 15:34:31,433 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-05 15:34:31,434 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:34,890 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-05 15:34:34,890 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-05 15:34:34,891 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-05 15:34:34,906 ] root - INFO - Starting URL scraping for: https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled medical devices
+[ 2026-09-05 15:34:34,906 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:34,909 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.fda.gov:443
+[ 2026-09-05 15:34:34,914 ] root - INFO - Starting URL scraping for: https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-and-machine-learning-software-medical-device
+[ 2026-09-05 15:34:34,914 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:34,917 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.fda.gov:443
+[ 2026-09-05 15:34:34,922 ] root - INFO - Starting URL scraping for: https://jamanetwork.com/journals/jama/fullarticle/2825395
+[ 2026-09-05 15:34:34,922 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:34,924 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): jamanetwork.com:443
+[ 2026-09-05 15:34:34,929 ] root - INFO - Starting URL scraping for: https://www.deepmind.google/discover/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology/
+[ 2026-09-05 15:34:34,929 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:34,932 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.deepmind.google:443
+[ 2026-09-05 15:34:34,942 ] root - INFO - Starting URL scraping for: https://www.insilico.com/news/insilico-medicine-reaches-phase-2-clinical-trials-with-ai-discovered-drug
+[ 2026-09-05 15:34:34,942 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:34,944 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.insilico.com:443
+[ 2026-09-05 15:34:34,947 ] root - INFO - Starting URL scraping for: https://www.nature.com/articles/s41591-021-01544-3
+[ 2026-09-05 15:34:34,947 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:34,948 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.nature.com:443
+[ 2026-09-05 15:34:35,158 ] urllib3.connectionpool - DEBUG - https://jamanetwork.com:443 "GET /journals/jama/fullarticle/2825395 HTTP/1.1" 403 None
+[ 2026-09-05 15:34:35,159 ] root - ERROR - HTTP error occurred while scraping https://jamanetwork.com/journals/jama/fullarticle/2825395: 403 Client Error: Forbidden for url: https://jamanetwork.com/journals/jama/fullarticle/2825395
+[ 2026-09-05 15:34:35,331 ] urllib3.connectionpool - DEBUG - https://www.insilico.com:443 "GET /news/insilico-medicine-reaches-phase-2-clinical-trials-with-ai-discovered-drug HTTP/1.1" 301 0
+[ 2026-09-05 15:34:35,332 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): insilico.com:443
+[ 2026-09-05 15:34:35,399 ] urllib3.connectionpool - DEBUG - https://www.nature.com:443 "GET /articles/s41591-021-01544-3 HTTP/1.1" 303 150
+[ 2026-09-05 15:34:35,401 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): idp.nature.com:443
+[ 2026-09-05 15:34:35,428 ] urllib3.connectionpool - DEBUG - https://www.deepmind.google:443 "GET /discover/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology/ HTTP/1.1" 301 0
+[ 2026-09-05 15:34:35,429 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): deepmind.google:443
+[ 2026-09-05 15:34:35,468 ] urllib3.connectionpool - DEBUG - https://www.fda.gov:443 "GET /medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled%20medical%20devices HTTP/1.1" 404 14496
+[ 2026-09-05 15:34:35,469 ] root - ERROR - HTTP error occurred while scraping https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled medical devices: 404 Client Error: Not Found for url: https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled%20medical%20devices
+[ 2026-09-05 15:34:35,523 ] urllib3.connectionpool - DEBUG - https://www.fda.gov:443 "GET /regulatory-information/search-fda-guidance-documents/artificial-intelligence-and-machine-learning-software-medical-device HTTP/1.1" 404 14496
+[ 2026-09-05 15:34:35,527 ] root - ERROR - HTTP error occurred while scraping https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-and-machine-learning-software-medical-device: 404 Client Error: Not Found for url: https://www.fda.gov/regulatory-information/search-fda-guidance-documents/artificial-intelligence-and-machine-learning-software-medical-device
+[ 2026-09-05 15:34:35,614 ] urllib3.connectionpool - DEBUG - https://insilico.com:443 "GET /news/insilico-medicine-reaches-phase-2-clinical-trials-with-ai-discovered-drug HTTP/1.1" 404 None
+[ 2026-09-05 15:34:35,623 ] root - ERROR - HTTP error occurred while scraping https://www.insilico.com/news/insilico-medicine-reaches-phase-2-clinical-trials-with-ai-discovered-drug: 404 Client Error: Not Found for url: https://insilico.com/news/insilico-medicine-reaches-phase-2-clinical-trials-with-ai-discovered-drug
+[ 2026-09-05 15:34:35,758 ] urllib3.connectionpool - DEBUG - https://deepmind.google:443 "GET /discover/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology/ HTTP/1.1" 301 0
+[ 2026-09-05 15:34:35,794 ] urllib3.connectionpool - DEBUG - https://idp.nature.com:443 "GET /authorize?response_type=cookie&client_id=grover&redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41591-021-01544-3 HTTP/1.1" 302 0
+[ 2026-09-05 15:34:35,865 ] urllib3.connectionpool - DEBUG - https://deepmind.google:443 "GET /blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology/ HTTP/1.1" 200 None
+[ 2026-09-05 15:34:35,935 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-05 15:34:35,974 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-05 15:34:35,974 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,974 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,974 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,974 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div November 30, 2020 Science
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,986 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - extra in p: p For all of us working on computational and machine learning methods in science, systems like AlphaFold demonstrate the stunning potential for AI as a tool to aid fundamental discovery. Just as 50 years ago Anfinsen laid out a challenge far beyond scienceâs reach at the time, there are many aspects of our universe that remain unknown. The progress announced today gives us further confidence that AI will become one of humanityâs most useful tools in expanding the frontiers of scientific knowledge, and weâre looking forward to the many years of hard work and discovery ahead!
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - extra in p: p Weâre right at the beginning of exploring how best to enable other groups to use our structure predictions, alongside preparing a peer-reviewed paper for publication. While our team wonât be able to respond to every enquiry, if AlphaFold may be relevant to your work, please submit a few lines about it to alphafold@deepmind.com. Weâll be in contact if thereâs scope for further exploration.
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,987 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: article None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: article None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: article None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: article None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: article None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:35,988 ] trafilatura.main_extractor - DEBUG - (.//*[self::article or self::div or self::section][ starts-with(@class, 'main') or starts-with(@id, 'main') or starts-with(@role, 'main')])[1]|(.//main)[1]
+[ 2026-09-05 15:34:36,003 ] trafilatura.readability_lxml - DEBUG - Top 5: div 80.84772065124248
+[ 2026-09-05 15:34:36,003 ] trafilatura.readability_lxml - DEBUG - Top 5: div 71.28524945770064
+[ 2026-09-05 15:34:36,003 ] trafilatura.readability_lxml - DEBUG - Top 5: div 68.48624667258207
+[ 2026-09-05 15:34:36,003 ] trafilatura.readability_lxml - DEBUG - Top 5: div 63.0
+[ 2026-09-05 15:34:36,003 ] trafilatura.readability_lxml - DEBUG - Top 5: div 49.84010840108401
+[ 2026-09-05 15:34:36,003 ] trafilatura.external - DEBUG - extracted length: 1167 (algorithm) 12804 (extraction)
+[ 2026-09-05 15:34:36,003 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-05 15:34:36,005 ] root - INFO - Successfully extracted content using Trafilatura.
+[ 2026-09-05 15:34:36,027 ] urllib3.connectionpool - DEBUG - https://idp.nature.com:443 "GET /transit?redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41591-021-01544-3&code=88c14a02-e076-4973-ab6e-44157384ef40 HTTP/1.1" 302 0
+[ 2026-09-05 15:34:36,490 ] urllib3.connectionpool - DEBUG - https://www.nature.com:443 "GET /articles/s41591-021-01544-3 HTTP/1.1" 404 None
+[ 2026-09-05 15:34:36,503 ] root - ERROR - HTTP error occurred while scraping https://www.nature.com/articles/s41591-021-01544-3: 404 Client Error: Not Found for url: https://www.nature.com/articles/s41591-021-01544-3
+[ 2026-09-05 15:34:36,522 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:36,522 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-05 15:34:36,522 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:36,522 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-05 15:34:36,522 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:37,669 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 12:34:37 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788611676-jqoIu7oPNqyM2S3NOcIO'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a36544e27b6d7b1f-MRS')])
+[ 2026-09-05 15:34:37,669 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-05 15:34:37,670 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:40,034 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-05 15:34:40,034 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-05 15:34:40,034 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-05 15:34:40,042 ] root - INFO - Starting URL scraping for: https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices
+[ 2026-09-05 15:34:40,042 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:40,051 ] root - INFO - Starting URL scraping for: https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices
+[ 2026-09-05 15:34:40,052 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.fda.gov:443
+[ 2026-09-05 15:34:40,052 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:40,053 ] root - INFO - Starting URL scraping for: https://pubmed.ncbi.nlm.nih.gov/39353117/
+[ 2026-09-05 15:34:40,054 ] root - INFO - Starting URL scraping for: https://insilico.com/news/ai-discovered-drug-enters-phase-2-clinical-trials
+[ 2026-09-05 15:34:40,055 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:40,055 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.fda.gov:443
+[ 2026-09-05 15:34:40,055 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:40,056 ] root - INFO - Starting URL scraping for: https://www.nature.com/articles/s41591-021-01477-x
+[ 2026-09-05 15:34:40,057 ] root - INFO - Starting URL scraping for: https://www.fda.gov/medical-devices/recently-approved-devices/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices
+[ 2026-09-05 15:34:40,058 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): pubmed.ncbi.nlm.nih.gov:443
+[ 2026-09-05 15:34:40,059 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): insilico.com:443
+[ 2026-09-05 15:34:40,059 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:40,059 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:40,060 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.nature.com:443
+[ 2026-09-05 15:34:40,061 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.fda.gov:443
+[ 2026-09-05 15:34:40,267 ] urllib3.connectionpool - DEBUG - https://insilico.com:443 "GET /news/ai-discovered-drug-enters-phase-2-clinical-trials HTTP/1.1" 404 None
+[ 2026-09-05 15:34:40,271 ] root - ERROR - HTTP error occurred while scraping https://insilico.com/news/ai-discovered-drug-enters-phase-2-clinical-trials: 404 Client Error: Not Found for url: https://insilico.com/news/ai-discovered-drug-enters-phase-2-clinical-trials
+[ 2026-09-05 15:34:40,367 ] urllib3.connectionpool - DEBUG - https://www.fda.gov:443 "GET /medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices HTTP/1.1" 301 None
+[ 2026-09-05 15:34:40,368 ] urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): www.fda.gov:80
+[ 2026-09-05 15:34:40,411 ] urllib3.connectionpool - DEBUG - https://pubmed.ncbi.nlm.nih.gov:443 "GET /39353117/ HTTP/1.1" 203 None
+[ 2026-09-05 15:34:40,412 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-05 15:34:40,414 ] urllib3.connectionpool - DEBUG - https://www.nature.com:443 "GET /articles/s41591-021-01477-x HTTP/1.1" 303 150
+[ 2026-09-05 15:34:40,416 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): idp.nature.com:443
+[ 2026-09-05 15:34:40,416 ] trafilatura.main_extractor - DEBUG - Recovering wild text elements
+[ 2026-09-05 15:34:40,417 ] trafilatura.readability_lxml - DEBUG - Top 5: div 7.76
+[ 2026-09-05 15:34:40,417 ] trafilatura.readability_lxml - DEBUG - Top 5: body 1.38
+[ 2026-09-05 15:34:40,417 ] trafilatura.readability_lxml - DEBUG - Top 5: div 7.76
+[ 2026-09-05 15:34:40,417 ] trafilatura.readability_lxml - DEBUG - Top 5: div 6.38
+[ 2026-09-05 15:34:40,418 ] trafilatura.external - DEBUG - extracted length: 100 (algorithm) 76 (extraction)
+[ 2026-09-05 15:34:40,418 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-05 15:34:40,418 ] trafilatura.external - DEBUG - unclean document triggering justext examination: None
+[ 2026-09-05 15:34:40,473 ] urllib3.connectionpool - DEBUG - http://www.fda.gov:80 "GET /medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices HTTP/1.1" 301 0
+[ 2026-09-05 15:34:40,474 ] urllib3.connectionpool - DEBUG - Resetting dropped connection: www.fda.gov
+[ 2026-09-05 15:34:40,475 ] urllib3.connectionpool - DEBUG - https://www.fda.gov:443 "GET /medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices HTTP/1.1" 200 None
+[ 2026-09-05 15:34:40,632 ] trafilatura.core - DEBUG - non-clean extracted length: 100 (extraction)
+[ 2026-09-05 15:34:40,633 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-05 15:34:40,637 ] root - INFO - Strategy 1 insufficient. Attempting Strategy 2: Readability...
+[ 2026-09-05 15:34:40,638 ] readability.readability - INFO - ruthless removal did not work. 
+[ 2026-09-05 15:34:40,638 ] readability.readability - DEBUG - ended up stripping too much - going for a safer _parse
+[ 2026-09-05 15:34:40,638 ] readability.readability - DEBUG - Ruthless and lenient parsing did not work. Returning raw html
+[ 2026-09-05 15:34:40,639 ] root - INFO - Strategy 2 insufficient. Attempting Strategy 3: BeautifulSoup Fallback...
+[ 2026-09-05 15:34:40,640 ] root - INFO - Successfully extracted content using BeautifulSoup Fallback.
+[ 2026-09-05 15:34:40,670 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-05 15:34:40,670 ] trafilatura.main_extractor - DEBUG - discarding element: header None
+[ 2026-09-05 15:34:40,670 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:40,671 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:40,671 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:40,671 ] trafilatura.main_extractor - DEBUG - (.//article)[1]
+[ 2026-09-05 15:34:40,728 ] urllib3.connectionpool - DEBUG - https://www.fda.gov:443 "GET /medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices HTTP/1.1" 200 None
+[ 2026-09-05 15:34:40,738 ] urllib3.connectionpool - DEBUG - https://idp.nature.com:443 "GET /authorize?response_type=cookie&client_id=grover&redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41591-021-01477-x HTTP/1.1" 302 0
+[ 2026-09-05 15:34:40,776 ] trafilatura.readability_lxml - DEBUG - Top 5: tbody 1460.7024456521758
+[ 2026-09-05 15:34:40,776 ] trafilatura.readability_lxml - DEBUG - Top 5: article 66.79450781669527
+[ 2026-09-05 15:34:40,777 ] trafilatura.readability_lxml - DEBUG - Top 5: div 38.354175318062296
+[ 2026-09-05 15:34:40,777 ] trafilatura.readability_lxml - DEBUG - Top 5: tr 18.429777070063697
+[ 2026-09-05 15:34:40,777 ] trafilatura.readability_lxml - DEBUG - Top 5: tr 14.58384375
+[ 2026-09-05 15:34:40,794 ] trafilatura.external - DEBUG - extracted length: 128248 (algorithm) 3306 (extraction)
+[ 2026-09-05 15:34:40,794 ] trafilatura.external - DEBUG - using generic extraction: None
+[ 2026-09-05 15:34:40,828 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-05 15:34:40,874 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-05 15:34:40,874 ] trafilatura.main_extractor - DEBUG - discarding element: header None
+[ 2026-09-05 15:34:40,874 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:40,874 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:40,875 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:40,875 ] trafilatura.main_extractor - DEBUG - (.//article)[1]
+[ 2026-09-05 15:34:40,875 ] urllib3.connectionpool - DEBUG - https://www.fda.gov:443 "GET /medical-devices/recently-approved-devices/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices HTTP/1.1" 404 14496
+[ 2026-09-05 15:34:40,876 ] root - ERROR - HTTP error occurred while scraping https://www.fda.gov/medical-devices/recently-approved-devices/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices: 404 Client Error: Not Found for url: https://www.fda.gov/medical-devices/recently-approved-devices/artificial-intelligence-and-machine-learning-aiml-enabled-medical-devices
+[ 2026-09-05 15:34:40,905 ] trafilatura.core - DEBUG - non-clean extracted length: 131616 (extraction)
+[ 2026-09-05 15:34:40,914 ] urllib3.connectionpool - DEBUG - https://idp.nature.com:443 "GET /transit?redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41591-021-01477-x&code=72c998f1-7176-4d13-b69b-bc2b0db32915 HTTP/1.1" 302 0
+[ 2026-09-05 15:34:40,915 ] root - INFO - Successfully extracted content using Trafilatura.
+[ 2026-09-05 15:34:40,974 ] trafilatura.readability_lxml - DEBUG - Top 5: tbody 1460.7024456521758
+[ 2026-09-05 15:34:40,974 ] trafilatura.readability_lxml - DEBUG - Top 5: article 66.79450781669527
+[ 2026-09-05 15:34:40,975 ] trafilatura.readability_lxml - DEBUG - Top 5: div 38.354175318062296
+[ 2026-09-05 15:34:40,975 ] trafilatura.readability_lxml - DEBUG - Top 5: tr 18.429777070063697
+[ 2026-09-05 15:34:40,975 ] trafilatura.readability_lxml - DEBUG - Top 5: tr 14.58384375
+[ 2026-09-05 15:34:40,992 ] trafilatura.external - DEBUG - extracted length: 128248 (algorithm) 3306 (extraction)
+[ 2026-09-05 15:34:40,992 ] trafilatura.external - DEBUG - using generic extraction: None
+[ 2026-09-05 15:34:41,086 ] trafilatura.core - DEBUG - non-clean extracted length: 131616 (extraction)
+[ 2026-09-05 15:34:41,093 ] root - INFO - Successfully extracted content using Trafilatura.
+[ 2026-09-05 15:34:41,230 ] urllib3.connectionpool - DEBUG - https://www.nature.com:443 "GET /articles/s41591-021-01477-x HTTP/1.1" 404 None
+[ 2026-09-05 15:34:41,252 ] root - ERROR - HTTP error occurred while scraping https://www.nature.com/articles/s41591-021-01477-x: 404 Client Error: Not Found for url: https://www.nature.com/articles/s41591-021-01477-x
+[ 2026-09-05 15:34:41,293 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:41,294 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-05 15:34:41,294 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:41,294 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-05 15:34:41,294 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:43,076 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 12:34:43 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788611681-bKQ6rQblI0OSE1RtiDS5'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a36545004ebb7b1f-MRS')])
+[ 2026-09-05 15:34:43,076 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-05 15:34:43,077 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:44,310 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-05 15:34:44,310 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-05 15:34:44,311 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-05 15:34:44,327 ] root - INFO - Starting URL scraping for: https://www.insilico.com/phase2
+[ 2026-09-05 15:34:44,330 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:44,334 ] root - INFO - Starting URL scraping for: https://pubmed.ncbi.nlm.nih.gov/34667987/
+[ 2026-09-05 15:34:44,339 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.insilico.com:443
+[ 2026-09-05 15:34:44,342 ] root - INFO - Starting URL scraping for: https://www.nature.com/articles/s41591-021-01660-0
+[ 2026-09-05 15:34:44,342 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:44,345 ] root - INFO - Starting URL scraping for: https://insilico.com/news
+[ 2026-09-05 15:34:44,346 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:44,350 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): pubmed.ncbi.nlm.nih.gov:443
+[ 2026-09-05 15:34:44,350 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:44,353 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.nature.com:443
+[ 2026-09-05 15:34:44,357 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): insilico.com:443
+[ 2026-09-05 15:34:44,604 ] urllib3.connectionpool - DEBUG - https://www.insilico.com:443 "GET /phase2 HTTP/1.1" 301 0
+[ 2026-09-05 15:34:44,606 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): insilico.com:443
+[ 2026-09-05 15:34:44,610 ] urllib3.connectionpool - DEBUG - https://insilico.com:443 "GET /news HTTP/1.1" 200 None
+[ 2026-09-05 15:34:44,631 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-05 15:34:44,733 ] urllib3.connectionpool - DEBUG - https://www.nature.com:443 "GET /articles/s41591-021-01660-0 HTTP/1.1" 303 150
+[ 2026-09-05 15:34:44,734 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): idp.nature.com:443
+[ 2026-09-05 15:34:44,757 ] urllib3.connectionpool - DEBUG - https://pubmed.ncbi.nlm.nih.gov:443 "GET /34667987/ HTTP/1.1" 203 None
+[ 2026-09-05 15:34:44,758 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-05 15:34:44,813 ] trafilatura.main_extractor - DEBUG - Recovering wild text elements
+[ 2026-09-05 15:34:44,814 ] trafilatura.main_extractor - DEBUG - Recovering wild text elements
+[ 2026-09-05 15:34:44,815 ] trafilatura.readability_lxml - DEBUG - Top 5: div 7.76
+[ 2026-09-05 15:34:44,815 ] trafilatura.readability_lxml - DEBUG - Top 5: body 1.38
+[ 2026-09-05 15:34:44,815 ] trafilatura.readability_lxml - DEBUG - Top 5: div 7.76
+[ 2026-09-05 15:34:44,815 ] trafilatura.readability_lxml - DEBUG - Top 5: div 6.38
+[ 2026-09-05 15:34:44,816 ] trafilatura.external - DEBUG - extracted length: 100 (algorithm) 76 (extraction)
+[ 2026-09-05 15:34:44,816 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-05 15:34:44,816 ] trafilatura.external - DEBUG - unclean document triggering justext examination: None
+[ 2026-09-05 15:34:44,819 ] trafilatura.core - DEBUG - non-clean extracted length: 100 (extraction)
+[ 2026-09-05 15:34:44,820 ] root - INFO - Strategy 1 insufficient. Attempting Strategy 2: Readability...
+[ 2026-09-05 15:34:44,820 ] readability.readability - INFO - ruthless removal did not work. 
+[ 2026-09-05 15:34:44,820 ] readability.readability - DEBUG - ended up stripping too much - going for a safer _parse
+[ 2026-09-05 15:34:44,821 ] readability.readability - DEBUG - Ruthless and lenient parsing did not work. Returning raw html
+[ 2026-09-05 15:34:44,821 ] root - INFO - Strategy 2 insufficient. Attempting Strategy 3: BeautifulSoup Fallback...
+[ 2026-09-05 15:34:44,822 ] root - INFO - Successfully extracted content using BeautifulSoup Fallback.
+[ 2026-09-05 15:34:44,844 ] urllib3.connectionpool - DEBUG - https://insilico.com:443 "GET /phase2 HTTP/1.1" 404 None
+[ 2026-09-05 15:34:44,848 ] root - ERROR - HTTP error occurred while scraping https://www.insilico.com/phase2: 404 Client Error: Not Found for url: https://insilico.com/phase2
+[ 2026-09-05 15:34:44,864 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 4/10 – short elems/total: 3/3
+[ 2026-09-05 15:34:44,864 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 4/10 – short elems/total: 3/3
+[ 2026-09-05 15:34:44,864 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 4/10 – short elems/total: 3/3
+[ 2026-09-05 15:34:44,864 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 4/10 – short elems/total: 3/3
+[ 2026-09-05 15:34:44,864 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 4/10 – short elems/total: 3/3
+[ 2026-09-05 15:34:44,864 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 4/10 – short elems/total: 3/3
+[ 2026-09-05 15:34:44,864 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 4/10 – short elems/total: 3/3
+[ 2026-09-05 15:34:44,864 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 4/10 – short elems/total: 3/3
+[ 2026-09-05 15:34:44,864 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 4/10 – short elems/total: 3/3
+[ 2026-09-05 15:34:44,866 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 108/125 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,866 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 108/125 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,866 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 108/125 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,866 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 108/125 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,866 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 108/125 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,866 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 108/125 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,866 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 111/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 111/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 111/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 111/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 111/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 111/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 84/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 84/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 84/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 84/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 84/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 84/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 84/84 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/108 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/108 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,867 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/108 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/108 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/108 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/108 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/91 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 107/124 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 107/124 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 107/124 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 107/124 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 107/124 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 107/124 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 120/136 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 120/136 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 120/136 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 120/136 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 120/136 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 120/136 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,868 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/92 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/92 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/92 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/92 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/92 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/92 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/92 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/75 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 77/94 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 77/94 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 77/94 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 77/94 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 77/94 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 77/94 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 77/94 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 77/77 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 79/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 79/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 79/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 79/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 79/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 79/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 79/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 79/79 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 112/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 112/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 112/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 112/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 112/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 112/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/89 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 113/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 113/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 113/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 113/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 113/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 113/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/109 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/109 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/109 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/109 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/109 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/109 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/91 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 151/169 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 151/169 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 151/169 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 151/169 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 151/169 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 151/169 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 132/150 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 132/150 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 132/150 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 132/150 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 132/150 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 132/150 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/133 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/133 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/133 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/133 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/133 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/133 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/80 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 108/123 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 108/123 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 108/123 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 108/123 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 108/123 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 108/123 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 82/96 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 82/96 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 82/96 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 82/96 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 82/96 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 82/96 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 82/96 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 82/82 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,873 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/89 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,874 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/89 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,874 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/89 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,874 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/89 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,874 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/89 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,874 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/89 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,874 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/89 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,874 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 75/75 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,874 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 88/102 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,874 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 88/102 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,874 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 88/102 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,875 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 88/102 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,875 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 88/102 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,875 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 88/102 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,875 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 88/88 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,875 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 58/72 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,875 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 58/72 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,875 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 58/72 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,875 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 58/72 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,875 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 58/72 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,875 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 58/72 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,875 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 58/72 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,875 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 58/58 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/102 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/102 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/102 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/102 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/102 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/102 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/89 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 103/116 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 103/116 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 103/116 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 103/116 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 103/116 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 103/116 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/129 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/129 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,876 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/129 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/129 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/129 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/129 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 68/81 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 68/81 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 68/81 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 68/81 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 68/81 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 68/81 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 68/81 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 68/68 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 66/79 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 66/79 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 66/79 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 66/79 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 66/79 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 66/79 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 66/79 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,877 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 66/66 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 103/116 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 103/116 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 103/116 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 103/116 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 103/116 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 103/116 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/129 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/129 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/129 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/129 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/129 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 116/129 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 106/118 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 106/118 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,878 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 106/118 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 106/118 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 106/118 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 106/118 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/87 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,879 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/91 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 97/109 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 97/109 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 97/109 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 97/109 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 97/109 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 97/109 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 97/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,880 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/85 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/104 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/104 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/104 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/104 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/104 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/104 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/92 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/87 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,881 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/85 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/85 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/85 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/85 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/85 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/85 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/85 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/74 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 89/89 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/100 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/100 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,882 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/100 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/100 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/100 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/100 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/87 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 115/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 115/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 115/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 115/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 115/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 115/128 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/88 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/88 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/88 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/88 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/88 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/88 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/88 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,883 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/74 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/83 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 99/113 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 99/113 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 99/113 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 99/113 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 99/113 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 99/113 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,884 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 99/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,885 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,885 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,885 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,885 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,885 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,885 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,885 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/92 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,885 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/110 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,885 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/110 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,885 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/110 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,885 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/110 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,885 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/110 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,885 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/110 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,885 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/93 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,886 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,886 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,886 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,886 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,886 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,886 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,886 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/97 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,886 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 80/80 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,886 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,886 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,886 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,886 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,886 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,887 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,887 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/87 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,887 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 135/151 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,887 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 135/151 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,887 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 135/151 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,887 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 135/151 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,887 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 135/151 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,887 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 135/151 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,887 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,887 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,887 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,887 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,888 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,888 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,888 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 85/85 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,888 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/107 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,888 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/107 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,888 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/107 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,888 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/107 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,888 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/107 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,888 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/107 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,888 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/91 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,888 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,888 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,889 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,889 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,889 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,889 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,889 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/99 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,889 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/83 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,890 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 157/179 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,890 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 157/179 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,891 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 157/179 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,891 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 157/179 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,891 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 157/179 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,891 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,891 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,891 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,891 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,891 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,891 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 83/83 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,891 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/114 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,891 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/114 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,892 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/114 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,892 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/114 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,892 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/114 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,892 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 92/92 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,892 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/114 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,892 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/114 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,892 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/114 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,892 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/114 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,892 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/114 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,892 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/93 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,893 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 115/136 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,893 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 115/136 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,893 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 115/136 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,893 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 115/136 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,893 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 115/136 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,893 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 111/134 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,893 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 111/134 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,893 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 111/134 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,893 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 111/134 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,893 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 111/134 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,894 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 134/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,894 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 134/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,894 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 134/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,894 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 134/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,894 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 134/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,894 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 133/151 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,894 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 133/151 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,894 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 133/151 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,894 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 133/151 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,894 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 133/151 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,895 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/67 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,895 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/67 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,895 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/67 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,895 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/67 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,895 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/67 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,895 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/67 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,895 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/62 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,895 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/49 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,895 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 136/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,895 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 136/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 136/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 136/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 136/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 101/118 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 101/118 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 101/118 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 101/118 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 101/118 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 86/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 86/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 86/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 86/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 86/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 86/98 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,896 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 86/86 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,897 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 144/161 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,897 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 144/161 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,897 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 144/161 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,897 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 144/161 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,897 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 144/161 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,897 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 147/164 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,897 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 147/164 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,897 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 147/164 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,897 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 147/164 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,897 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 147/164 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,898 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/98 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,898 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/98 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,898 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/98 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,898 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/98 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,898 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/98 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,898 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/98 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,898 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/93 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,898 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/81 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,898 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 117/134 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,898 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 117/134 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,898 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 117/134 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,898 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 117/134 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,899 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 117/134 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,899 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 117/134 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,900 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 84/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,900 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 84/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,900 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 84/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,900 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 84/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,900 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 84/101 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,900 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 84/96 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,900 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 84/84 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,901 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 67/84 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,901 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 67/84 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,901 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 67/84 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,901 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 67/84 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,901 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 67/84 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,901 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 67/84 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,901 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 67/79 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,901 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 67/67 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,901 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 130/147 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,901 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 130/147 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,901 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 130/147 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,901 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 130/147 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,901 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 130/147 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,902 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 137/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,902 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 137/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,902 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 137/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,902 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 137/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,902 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 137/154 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,903 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 86/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,903 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 86/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,903 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 86/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,903 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 86/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,903 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 86/103 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,903 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 86/98 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,903 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 86/86 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,903 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 135/152 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,903 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 135/152 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,903 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 135/152 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,903 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 135/152 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,903 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 135/152 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,904 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/94 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,904 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/94 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,904 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/94 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,904 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/94 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,904 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/94 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,904 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/94 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,904 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/89 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,904 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/78 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,904 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 132/148 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,904 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 132/148 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,904 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 132/148 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,904 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 132/148 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,905 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 132/148 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,905 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 134/150 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,905 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 134/150 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,905 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 134/150 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,905 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 134/150 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,905 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 134/150 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,905 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/91 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,905 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/91 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,905 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/91 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,905 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/91 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,906 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/91 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,906 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/91 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,906 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/86 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,906 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 74/74 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,906 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/98 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,906 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/98 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,906 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/98 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,906 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/98 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,906 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/98 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,906 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/98 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,906 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/93 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,906 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 81/81 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,907 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 65/82 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,907 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 65/82 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,907 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 65/82 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,907 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 65/82 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,907 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 65/82 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,907 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 65/82 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,907 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 65/77 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,907 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 65/65 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,907 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 94/110 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,907 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 94/110 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,907 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 94/110 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,908 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 94/110 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,908 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 94/110 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,908 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 94/94 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,908 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 88/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,908 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 88/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,908 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 88/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,908 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 88/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,909 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 88/105 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,909 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 88/88 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,909 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,909 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,909 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,909 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,909 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,910 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/95 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,910 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/90 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,910 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 78/78 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,910 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/108 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,910 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/108 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,911 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/108 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,911 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/108 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,911 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/108 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,911 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 91/91 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,911 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 125/142 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,911 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 125/142 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,912 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 125/142 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,912 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 125/142 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,912 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 125/142 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,912 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 125/142 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,913 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 14/180 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,914 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 14/180 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,914 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 14/180 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,915 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 14/180 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,915 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 14/54 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,917 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 14/260 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,918 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 14/180 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,918 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 14/180 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,918 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 14/180 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,919 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 14/180 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,919 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 14/54 – short elems/total: 0/1
+[ 2026-09-05 15:34:44,965 ] trafilatura.readability_lxml - DEBUG - Top 5: div 35.239999999999995
+[ 2026-09-05 15:34:44,965 ] trafilatura.readability_lxml - DEBUG - Top 5: div 8.53953125
+[ 2026-09-05 15:34:44,965 ] trafilatura.readability_lxml - DEBUG - Top 5: div 8.51
+[ 2026-09-05 15:34:44,965 ] trafilatura.readability_lxml - DEBUG - Top 5: div 5.474074074074074
+[ 2026-09-05 15:34:44,965 ] trafilatura.readability_lxml - DEBUG - Top 5: a 5.37
+[ 2026-09-05 15:34:44,965 ] trafilatura.external - DEBUG - extracted length: 125 (algorithm) 0 (extraction)
+[ 2026-09-05 15:34:44,965 ] trafilatura.external - DEBUG - using generic extraction: None
+[ 2026-09-05 15:34:44,966 ] trafilatura.external - DEBUG - unclean document triggering justext examination: None
+[ 2026-09-05 15:34:45,048 ] trafilatura.core - DEBUG - non-clean extracted length: 13339 (extraction)
+[ 2026-09-05 15:34:45,054 ] root - INFO - Successfully extracted content using Trafilatura.
+[ 2026-09-05 15:34:45,064 ] urllib3.connectionpool - DEBUG - https://idp.nature.com:443 "GET /authorize?response_type=cookie&client_id=grover&redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41591-021-01660-0 HTTP/1.1" 302 0
+[ 2026-09-05 15:34:45,225 ] urllib3.connectionpool - DEBUG - https://idp.nature.com:443 "GET /transit?redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41591-021-01660-0&code=b8685f8e-bbf4-4870-9380-e8e2996abb81 HTTP/1.1" 302 0
+[ 2026-09-05 15:34:45,523 ] urllib3.connectionpool - DEBUG - https://www.nature.com:443 "GET /articles/s41591-021-01660-0 HTTP/1.1" 404 None
+[ 2026-09-05 15:34:45,549 ] root - ERROR - HTTP error occurred while scraping https://www.nature.com/articles/s41591-021-01660-0: 404 Client Error: Not Found for url: https://www.nature.com/articles/s41591-021-01660-0
+[ 2026-09-05 15:34:45,581 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:45,581 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-05 15:34:45,581 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:45,581 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-05 15:34:45,581 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:47,189 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 12:34:47 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788611685-sTLYg0aR6NFFWjXgIeIv'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a365451b18327b1f-MRS')])
+[ 2026-09-05 15:34:47,190 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-05 15:34:47,191 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:49,662 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-05 15:34:49,663 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-05 15:34:49,663 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-05 15:34:49,669 ] root - INFO - Starting URL scraping for: https://insilico.com/news/first-generative-ai-drug-enters-phase-ii
+[ 2026-09-05 15:34:49,669 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:49,670 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): insilico.com:443
+[ 2026-09-05 15:34:49,673 ] root - INFO - Starting URL scraping for: https://www.nature.com/articles/s41591-021-01664-8
+[ 2026-09-05 15:34:49,673 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:49,674 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.nature.com:443
+[ 2026-09-05 15:34:49,675 ] root - INFO - Starting URL scraping for: https://arxiv.org/abs/2408.09869
+[ 2026-09-05 15:34:49,675 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:49,678 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): arxiv.org:443
+[ 2026-09-05 15:34:49,680 ] root - INFO - Starting URL scraping for: https://www.bmj.com/content/384/bmj-2023-078538
+[ 2026-09-05 15:34:49,680 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:49,681 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.bmj.com:443
+[ 2026-09-05 15:34:49,876 ] urllib3.connectionpool - DEBUG - https://insilico.com:443 "GET /news/first-generative-ai-drug-enters-phase-ii HTTP/1.1" 404 None
+[ 2026-09-05 15:34:49,878 ] root - ERROR - HTTP error occurred while scraping https://insilico.com/news/first-generative-ai-drug-enters-phase-ii: 404 Client Error: Not Found for url: https://insilico.com/news/first-generative-ai-drug-enters-phase-ii
+[ 2026-09-05 15:34:49,921 ] urllib3.connectionpool - DEBUG - https://arxiv.org:443 "GET /abs/2408.09869 HTTP/1.1" 200 42083
+[ 2026-09-05 15:34:49,982 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-05 15:34:50,001 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 2/75 – short elems/total: 1/1
+[ 2026-09-05 15:34:50,001 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 26/279 – short elems/total: 4/5
+[ 2026-09-05 15:34:50,001 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/81 – short elems/total: 1/4
+[ 2026-09-05 15:34:50,001 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 12/12 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 12/15 – short elems/total: 2/2
+[ 2026-09-05 15:34:50,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 16/22 – short elems/total: 3/3
+[ 2026-09-05 15:34:50,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 12/35 – short elems/total: 3/3
+[ 2026-09-05 15:34:50,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 12/14 – short elems/total: 3/3
+[ 2026-09-05 15:34:50,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 38/62 – short elems/total: 1/3
+[ 2026-09-05 15:34:50,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/168 – short elems/total: 0/4
+[ 2026-09-05 15:34:50,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/46 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/46 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 25/44 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 25/44 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 16/26 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 16/26 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 25/49 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 25/49 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 108/210 – short elems/total: 0/6
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 17/28 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 17/28 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/53 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/53 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 16/26 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 16/26 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 17/29 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 17/29 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 20/35 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 20/35 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 20/34 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 20/34 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/95 – short elems/total: 0/3
+[ 2026-09-05 15:34:50,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/30 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,004 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/30 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,004 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 15/37 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,004 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 15/37 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,004 ] urllib3.connectionpool - DEBUG - https://www.nature.com:443 "GET /articles/s41591-021-01664-8 HTTP/1.1" 303 150
+[ 2026-09-05 15:34:50,004 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 16/26 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,005 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): idp.nature.com:443
+[ 2026-09-05 15:34:50,005 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 16/26 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,005 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 40/79 – short elems/total: 0/2
+[ 2026-09-05 15:34:50,005 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 27/46 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,006 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 27/46 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,006 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 13/32 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,006 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 13/32 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,006 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 73/79 – short elems/total: 0/3
+[ 2026-09-05 15:34:50,006 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 38/39 – short elems/total: 1/3
+[ 2026-09-05 15:34:50,007 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 2/75 – short elems/total: 1/1
+[ 2026-09-05 15:34:50,007 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 26/279 – short elems/total: 4/5
+[ 2026-09-05 15:34:50,007 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 87/168 – short elems/total: 0/4
+[ 2026-09-05 15:34:50,007 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/46 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,007 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/46 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,007 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 25/44 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,007 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 25/44 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,007 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 16/26 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,007 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 16/26 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,007 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 25/49 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,007 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 25/49 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,008 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 108/210 – short elems/total: 0/6
+[ 2026-09-05 15:34:50,008 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 17/28 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,008 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 17/28 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,008 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/53 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,008 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/53 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,008 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 16/26 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,008 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 16/26 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,008 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 17/29 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,008 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 17/29 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,008 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 20/35 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,008 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 20/35 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,009 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 20/34 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,009 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 20/34 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,009 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 40/79 – short elems/total: 0/2
+[ 2026-09-05 15:34:50,009 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 27/46 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,009 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 27/46 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,010 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 13/32 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,010 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 13/32 – short elems/total: 0/1
+[ 2026-09-05 15:34:50,010 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'div', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-05 15:34:50,011 ] trafilatura.main_extractor - DEBUG - (.//*[self::article or self::div or self::main or self::section][ @id='content' or @class='content' or re:test(@id, 'content-main|content-body|contentBody') or re:test(@class, 'content[-_]main|content(?:-|__)body') or contains(translate(@id, 'CM','cm'), 'main-content') or contains(translate(@class, 'CM','cm'), 'main-content') or contains(translate(@class, 'CP','cp'), 'page-content') ])[1]
+[ 2026-09-05 15:34:50,016 ] trafilatura.readability_lxml - DEBUG - Ended up stripping too much - going for a safer parse
+[ 2026-09-05 15:34:50,016 ] trafilatura.readability_lxml - DEBUG - Ruthless and lenient parsing did not work. Returning raw html
+[ 2026-09-05 15:34:50,017 ] trafilatura.external - DEBUG - extracted length: 0 (algorithm) 2533 (extraction)
+[ 2026-09-05 15:34:50,017 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-05 15:34:50,023 ] root - INFO - Successfully extracted content using Trafilatura.
+[ 2026-09-05 15:34:50,337 ] urllib3.connectionpool - DEBUG - https://idp.nature.com:443 "GET /authorize?response_type=cookie&client_id=grover&redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41591-021-01664-8 HTTP/1.1" 302 0
+[ 2026-09-05 15:34:50,510 ] urllib3.connectionpool - DEBUG - https://idp.nature.com:443 "GET /transit?redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41591-021-01664-8&code=9ea05fb5-fa0a-4dd6-8b29-749fb49cf08d HTTP/1.1" 302 0
+[ 2026-09-05 15:34:50,782 ] urllib3.connectionpool - DEBUG - https://www.nature.com:443 "GET /articles/s41591-021-01664-8 HTTP/1.1" 404 None
+[ 2026-09-05 15:34:50,801 ] root - ERROR - HTTP error occurred while scraping https://www.nature.com/articles/s41591-021-01664-8: 404 Client Error: Not Found for url: https://www.nature.com/articles/s41591-021-01664-8
+[ 2026-09-05 15:34:52,198 ] urllib3.connectionpool - DEBUG - https://www.bmj.com:443 "GET /content/384/bmj-2023-078538 HTTP/1.1" 200 None
+[ 2026-09-05 15:34:52,379 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-05 15:34:52,415 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/53 – short elems/total: 3/5
+[ 2026-09-05 15:34:52,415 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/53 – short elems/total: 3/5
+[ 2026-09-05 15:34:52,425 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/51 – short elems/total: 0/3
+[ 2026-09-05 15:34:52,425 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/51 – short elems/total: 0/3
+[ 2026-09-05 15:34:52,425 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 49/51 – short elems/total: 0/3
+[ 2026-09-05 15:34:52,425 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/37 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,425 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/37 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,425 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/37 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,425 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/37 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,425 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/37 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,426 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/37 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,426 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/37 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,426 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/37 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,426 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/37 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,426 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/37 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,426 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/37 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,426 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/37 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,427 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,427 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,427 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,428 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,428 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,428 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,428 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,428 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,428 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,428 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,428 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,428 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,428 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,428 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,429 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,429 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,429 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 15/15 – short elems/total: 2/2
+[ 2026-09-05 15:34:52,429 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 15/15 – short elems/total: 2/2
+[ 2026-09-05 15:34:52,429 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,429 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,429 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,429 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,429 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 30/30 – short elems/total: 1/2
+[ 2026-09-05 15:34:52,429 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 30/30 – short elems/total: 1/2
+[ 2026-09-05 15:34:52,429 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,429 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,429 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 15/15 – short elems/total: 2/2
+[ 2026-09-05 15:34:52,430 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 15/15 – short elems/total: 2/2
+[ 2026-09-05 15:34:52,430 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,430 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,430 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,430 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,430 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,430 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,430 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,430 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 3/3
+[ 2026-09-05 15:34:52,430 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 15/15 – short elems/total: 2/2
+[ 2026-09-05 15:34:52,430 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 15/15 – short elems/total: 2/2
+[ 2026-09-05 15:34:52,431 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,431 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,431 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 0/2
+[ 2026-09-05 15:34:52,441 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div Research Special Paper
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,442 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,443 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div View this table:
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div View this table:
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div View this table:
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,444 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,445 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,445 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,445 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,445 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,445 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,445 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,445 ] trafilatura.main_extractor - DEBUG - discarding element: div http://creativecommons.org/licenses/by-nc/4.0/
+[ 2026-09-05 15:34:52,445 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,445 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:52,445 ] trafilatura.main_extractor - DEBUG - (.//article)[1]
+[ 2026-09-05 15:34:52,471 ] trafilatura.readability_lxml - DEBUG - Top 5: div 87.822695035461
+[ 2026-09-05 15:34:52,471 ] trafilatura.readability_lxml - DEBUG - Top 5: div 79.76534674209093
+[ 2026-09-05 15:34:52,471 ] trafilatura.readability_lxml - DEBUG - Top 5: div 70.4390793325527
+[ 2026-09-05 15:34:52,471 ] trafilatura.readability_lxml - DEBUG - Top 5: div 68.35702690166976
+[ 2026-09-05 15:34:52,471 ] trafilatura.readability_lxml - DEBUG - Top 5: div 66.6483425493864
+[ 2026-09-05 15:34:52,472 ] trafilatura.readability_lxml - DEBUG - Removed  0.000 ul with weight 0 cause it has too short content length 21 without a single image.
+[ 2026-09-05 15:34:52,472 ] trafilatura.readability_lxml - DEBUG - Removed  0.000 div with weight 0 cause it has too short content length 16 without a single image.
+[ 2026-09-05 15:34:52,472 ] trafilatura.readability_lxml - DEBUG - Removed  5.712 div with weight 0 cause it has too short content length 0 without a single image.
+[ 2026-09-05 15:34:52,473 ] trafilatura.readability_lxml - DEBUG - Removed  0.000 ul with weight 0 cause it has too short content length 21 without a single image.
+[ 2026-09-05 15:34:52,473 ] trafilatura.readability_lxml - DEBUG - Removed  0.000 div with weight 0 cause it has too short content length 16 without a single image.
+[ 2026-09-05 15:34:52,473 ] trafilatura.readability_lxml - DEBUG - Removed  6.695 div with weight 0 cause it has too short content length 0 without a single image.
+[ 2026-09-05 15:34:52,473 ] trafilatura.readability_lxml - DEBUG - Removed  0.000 ul with weight 0 cause it has too short content length 21 without a single image.
+[ 2026-09-05 15:34:52,473 ] trafilatura.readability_lxml - DEBUG - Removed  0.000 div with weight 0 cause it has too short content length 16 without a single image.
+[ 2026-09-05 15:34:52,473 ] trafilatura.readability_lxml - DEBUG - Removed  6.211 div with weight 0 cause it has too short content length 0 without a single image.
+[ 2026-09-05 15:34:52,473 ] trafilatura.readability_lxml - DEBUG - Removed ul with score  0.000 and weight -25
+[ 2026-09-05 15:34:52,474 ] trafilatura.readability_lxml - DEBUG - Removed  0.000 div with weight 0 cause it has no content.
+[ 2026-09-05 15:34:52,474 ] trafilatura.readability_lxml - DEBUG - Removed -14.480 div with weight 0 cause it has too short content length 0 without a single image.
+[ 2026-09-05 15:34:52,474 ] trafilatura.readability_lxml - DEBUG - Removed div with score -14.480 and weight -25
+[ 2026-09-05 15:34:52,474 ] trafilatura.readability_lxml - DEBUG - Removed  0.000 div with weight 0 cause it has too short content length 0 without a single image.
+[ 2026-09-05 15:34:52,474 ] trafilatura.readability_lxml - DEBUG - Removed div with score  0.000 and weight -25
+[ 2026-09-05 15:34:52,475 ] trafilatura.external - DEBUG - extracted length: 36958 (algorithm) 43099 (extraction)
+[ 2026-09-05 15:34:52,475 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-05 15:34:52,480 ] root - INFO - Successfully extracted content using Trafilatura.
+[ 2026-09-05 15:34:52,502 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:52,502 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-05 15:34:52,502 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:52,502 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-05 15:34:52,502 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:54,163 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 12:34:54 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788611692-DmvyfzXe2aUnZcnYcuJT'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a36545465c2a7b1f-MRS')])
+[ 2026-09-05 15:34:54,164 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-05 15:34:54,165 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:55,430 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-05 15:34:55,430 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-05 15:34:55,430 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-05 15:34:55,436 ] root - INFO - Starting URL scraping for: https://blog.google/technology/ai/google-deepmind-isomorphic-alphafold-3/
+[ 2026-09-05 15:34:55,439 ] root - INFO - Starting URL scraping for: https://www.nature.com/articles/s41586-024-07487-w
+[ 2026-09-05 15:34:55,439 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:55,441 ] root - INFO - Starting URL scraping for: https://www.deepmind.google/discover/blog/alphafold-3-predicting-the-structure-and-interactions-of-all-lifes-molecules/
+[ 2026-09-05 15:34:55,443 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:55,442 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): blog.google:443
+[ 2026-09-05 15:34:55,441 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-05 15:34:55,444 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.deepmind.google:443
+[ 2026-09-05 15:34:55,446 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.nature.com:443
+[ 2026-09-05 15:34:55,708 ] urllib3.connectionpool - DEBUG - https://www.deepmind.google:443 "GET /discover/blog/alphafold-3-predicting-the-structure-and-interactions-of-all-lifes-molecules/ HTTP/1.1" 301 0
+[ 2026-09-05 15:34:55,710 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): deepmind.google:443
+[ 2026-09-05 15:34:55,790 ] urllib3.connectionpool - DEBUG - https://www.nature.com:443 "GET /articles/s41586-024-07487-w HTTP/1.1" 303 150
+[ 2026-09-05 15:34:55,793 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): idp.nature.com:443
+[ 2026-09-05 15:34:55,964 ] urllib3.connectionpool - DEBUG - https://deepmind.google:443 "GET /discover/blog/alphafold-3-predicting-the-structure-and-interactions-of-all-lifes-molecules/ HTTP/1.1" 404 None
+[ 2026-09-05 15:34:56,032 ] root - ERROR - HTTP error occurred while scraping https://www.deepmind.google/discover/blog/alphafold-3-predicting-the-structure-and-interactions-of-all-lifes-molecules/: 404 Client Error: Not Found for url: https://deepmind.google/discover/blog/alphafold-3-predicting-the-structure-and-interactions-of-all-lifes-molecules/
+[ 2026-09-05 15:34:56,099 ] urllib3.connectionpool - DEBUG - https://idp.nature.com:443 "GET /authorize?response_type=cookie&client_id=grover&redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41586-024-07487-w HTTP/1.1" 302 0
+[ 2026-09-05 15:34:56,295 ] urllib3.connectionpool - DEBUG - https://idp.nature.com:443 "GET /transit?redirect_uri=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41586-024-07487-w&code=67aae105-fd0c-465e-b89b-8fc97b16847f HTTP/1.1" 302 0
+[ 2026-09-05 15:34:56,400 ] urllib3.connectionpool - DEBUG - https://blog.google:443 "GET /technology/ai/google-deepmind-isomorphic-alphafold-3/ HTTP/1.1" 404 None
+[ 2026-09-05 15:34:56,500 ] root - ERROR - HTTP error occurred while scraping https://blog.google/technology/ai/google-deepmind-isomorphic-alphafold-3/: 404 Client Error: Not Found for url: https://blog.google/technology/ai/google-deepmind-isomorphic-alphafold-3/
+[ 2026-09-05 15:34:56,701 ] urllib3.connectionpool - DEBUG - https://www.nature.com:443 "GET /articles/s41586-024-07487-w HTTP/1.1" 200 None
+[ 2026-09-05 15:34:56,917 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-05 15:34:56,980 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 228/230 – short elems/total: 0/3
+[ 2026-09-05 15:34:56,980 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 70/70 – short elems/total: 0/1
+[ 2026-09-05 15:34:56,980 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 70/70 – short elems/total: 0/1
+[ 2026-09-05 15:34:56,980 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 65/65 – short elems/total: 0/1
+[ 2026-09-05 15:34:56,980 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 65/65 – short elems/total: 0/1
+[ 2026-09-05 15:34:56,980 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/93 – short elems/total: 0/1
+[ 2026-09-05 15:34:56,980 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 93/93 – short elems/total: 0/1
+[ 2026-09-05 15:34:56,984 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 56/292 – short elems/total: 0/2
+[ 2026-09-05 15:34:56,984 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 56/274 – short elems/total: 0/2
+[ 2026-09-05 15:34:56,985 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 33/33 – short elems/total: 0/1
+[ 2026-09-05 15:34:56,986 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 34/140 – short elems/total: 0/1
+[ 2026-09-05 15:34:56,988 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 24/24 – short elems/total: 0/1
+[ 2026-09-05 15:34:56,992 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 56/292 – short elems/total: 0/2
+[ 2026-09-05 15:34:56,992 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 56/274 – short elems/total: 0/2
+[ 2026-09-05 15:34:56,992 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 34/140 – short elems/total: 0/1
+[ 2026-09-05 15:34:56,995 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-05 15:34:56,995 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,996 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,997 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,998 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,998 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,998 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,998 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,998 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,998 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:56,999 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-05 15:34:57,000 ] trafilatura.main_extractor - DEBUG - .//*[self::article or self::div or self::main or self::section][ @class='post' or @class='entry' or @itemprop='articleBody' or @id='articleContent' or re:test(@id, '(?:entry|article|art)-content|article__content|article(?:-|__)?body|articleBody|body-text') or re:test(@class, 'post[-_]text|post-body|post-?entry|post[-_]?content|postContent|post_inner_wrapper|article-?text|articleText|(?:entry|page|text|article|art)-content|article__content|article(?:-|__)?body|articleBody|ArticleContent|body-text|article__container') ][1]
+[ 2026-09-05 15:34:57,070 ] trafilatura.readability_lxml - DEBUG - Top 5: ol 251.35549595375727
+[ 2026-09-05 15:34:57,070 ] trafilatura.readability_lxml - DEBUG - Top 5: div 238.6826020408163
+[ 2026-09-05 15:34:57,070 ] trafilatura.readability_lxml - DEBUG - Top 5: div 121.72972228759708
+[ 2026-09-05 15:34:57,070 ] trafilatura.readability_lxml - DEBUG - Top 5: div 121.06034145705722
+[ 2026-09-05 15:34:57,070 ] trafilatura.readability_lxml - DEBUG - Top 5: div 116.17307994345846
+[ 2026-09-05 15:34:57,078 ] trafilatura.external - DEBUG - extracted length: 12975 (algorithm) 63637 (extraction)
+[ 2026-09-05 15:34:57,078 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-05 15:34:57,099 ] root - INFO - Successfully extracted content using Trafilatura.
+[ 2026-09-05 15:34:57,133 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:57,133 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-05 15:34:57,133 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:57,133 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-05 15:34:57,134 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:34:58,332 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 12:34:58 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788611697-QVVZSSPgIPq3SBaaib3b'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a365456348297b1f-MRS')])
+[ 2026-09-05 15:34:58,333 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-05 15:34:58,333 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:35:09,856 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-05 15:35:09,857 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-05 15:35:09,857 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-05 15:35:09,860 ] root - INFO - Reader Agent completed scraping.
+[ 2026-09-05 15:35:09,861 ] root - INFO - Step 3/4: Executing Writer Chain...
+[ 2026-09-05 15:35:09,890 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:35:09,890 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-05 15:35:09,890 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:35:09,890 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-05 15:35:09,890 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:35:11,030 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 12:35:11 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788611709-jL5MsB4GEnFNbpOeEd2P'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a36545b30b787b1f-MRS')])
+[ 2026-09-05 15:35:11,030 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-05 15:35:11,030 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:35:48,173 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-05 15:35:48,173 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-05 15:35:48,174 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-05 15:35:48,183 ] root - INFO - Writer Chain completed drafting report.
+[ 2026-09-05 15:35:48,184 ] root - INFO - Step 4/4: Executing Critic Chain...
+[ 2026-09-05 15:35:48,211 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:35:48,211 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-05 15:35:48,211 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:35:48,211 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-05 15:35:48,211 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-05 15:35:49,469 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 12:35:49 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788611748-YMG4DdYmHBXtHKRq6UMr'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a36546a28d807b1f-MRS')])
+[ 2026-09-05 15:35:49,470 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-05 15:35:49,470 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-05 15:35:58,532 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-05 15:35:58,533 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-05 15:35:58,533 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-05 15:35:58,537 ] root - INFO - Critic Chain completed report review.
+[ 2026-09-05 15:35:58,538 ] root - INFO - Research pipeline finished successfully.

@@ -41,8 +41,8 @@ try:
     )
     @tool
     @ensure_annotations
-    
-    def query(text: str):
+
+    def web_search(text: str):
 
         """Search the web for recent and reliable information on a topic . Returns Titles , URLs and snippets."""
         logging.info("getting response....")

@@ -106,4 +106,4 @@ def scrape_url(url: str) -> str:
         logging.debug("Error occurred inside scrape_url tool execution.")
         raise multi_agent(e, sys)
 
-scrape_url(" https://www.mtu.edu/data-science/undergraduate/ai/what-is")
+# scrape_url(" https://www.mtu.edu/data-science/undergraduate/ai/what-is")
