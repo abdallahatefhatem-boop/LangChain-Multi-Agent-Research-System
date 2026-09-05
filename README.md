@@ -15,16 +15,35 @@ The pipeline runs four steps:
 The pipeline returns `search_results`, `scraped_content`, `report`, and
 `feedback`.
 
-## How the pipeline works
-
-```mermaid
-flowchart TD
-    A[Research topic] --> B[Search agent]
-    B -->|Tavily: titles, URLs, snippets| C[Reader agent]
-    C -->|Scrape selected URLs| D[Writer chain]
-    D -->|Structured research report| E[Critic chain]
-    E --> F[Report plus score and feedback]
-```
+┌─────────────────────────────────────────────────────┐
+│           Streamlit UI (app.py)                     │
+│      Multi-Agent Research Assistant Interface       │
+└──────────────────┬──────────────────────────────────┘
+                   │
+┌──────────────────▼──────────────────────────────────┐
+│      Research Pipeline (pipeline.py)                │
+│        Orchestrates multi-agent workflow            │
+└──────────────────┬──────────────────────────────────┘
+                   │
+    ┌──────────────┼──────────────┐
+    │              │              │
+┌───▼───┐    ┌────▼─────┐   ┌───▼────┐
+│Search │    │   Reader  │   │ Writer │
+│Agent  │    │   Agent   │   │ Chain  │
+└───┬───┘    └────┬─────┘   └───┬────┘
+    │             │             │
+    │  ┌──────────▼─────────┐   │
+    └─▶│  Tools Layer       │◀──┘
+       │                    │
+       │ • web_search      │
+       │ • scrape_url      │
+       │                    │
+       └────────┬───────────┘
+                │
+            ┌───▼────────┐
+            │ Critic     │
+            │ Chain      │
+            └────────────┘
 
 In simple terms: the system searches first, reads the most useful sources,
 writes a report, and then checks the report before returning it.
