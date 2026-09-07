@@ -22,6 +22,9 @@ logging.basicConfig(
     level=logging.DEBUG,
 )
 
+# Silence watchdog debug logs to prevent infinite logging loops when it watches the log directory
+logging.getLogger("watchdog").setLevel(logging.WARNING)
+
 # 5. Get logger instance
 logger = structlog.get_logger()
 

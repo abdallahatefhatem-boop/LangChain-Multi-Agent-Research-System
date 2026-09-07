@@ -1,4 +1,7 @@
 import sys
+import dagshub
+import mlflow
+
 from src.agents.agents import (
     build_search_agent,
     build_reader_agent,
@@ -8,6 +11,8 @@ from src.agents.agents import (
 from src.logger import logging
 from src.exception import multi_agent
 
+# Initialize DagsHub tracking for the project
+dagshub.init(repo_owner='abdallahatefhatem', repo_name='LangChain-Multi-Agent-Research-System', mlflow=True)
 
 def run_research_pipeline(topic: str) -> dict:
     """
@@ -69,6 +74,15 @@ def run_research_pipeline(topic: str) -> dict:
         logging.info("Critic Chain completed report review.")
 
         logging.info("Research pipeline finished successfully.")
+        
+        # ── Log Results to MLflow (DagsHub) ───────────────────────────────
+        with mlflow.start_run(run_name=f"Research_{topic.replace(' ', '_')[:20]}"):
+            mlflow.log_param("topic", topic)
+            mlflow.log_metric("report_length", len(state.get("report", "")))
+            mlflow.log_metric("search_results_length", len(state.get("search_results", "")))
+            mlflow.log_text(state.get("report", ""), "final_report.txt")
+            mlflow.log_text(state.get("feedback", ""), "critic_feedback.txt")
+
         return state
 
     except Exception as e:
@@ -78,7 +92,7 @@ def run_research_pipeline(topic: str) -> dict:
 
 if __name__ == "__main__":
     # Test execution
-    result = run_research_pipeline("Artificial Intelligence in Healthcare")
+    result = run_research_pipeline("who is messi?")
     print("\n" + "=" * 50)
     print("FINAL REPORT:\n", result.get("report"))
     print("\n" + "=" * 50)

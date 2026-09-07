@@ -1,0 +1,146 @@
+[ 2026-09-07 07:49:40,315 ] root - INFO - get tavily api key....
+[ 2026-09-07 07:49:40,315 ] root - INFO - used tavily api key 
+[ 2026-09-07 07:49:40,487 ] root - INFO - Loading API key for OpenRouter...
+[ 2026-09-07 07:49:40,524 ] root - INFO - LLM initialized successfully via ChatOpenRouter.
+[ 2026-09-07 07:49:40,524 ] root - INFO - building search agent ....
+[ 2026-09-07 07:49:40,524 ] root - INFO - Done build search agent
+[ 2026-09-07 07:49:40,524 ] root - INFO - building reader agent .....
+[ 2026-09-07 07:49:40,524 ] root - INFO - Done build reader agent
+[ 2026-09-07 07:49:40,524 ] root - INFO - Loading prompt configurations from YAML file...
+[ 2026-09-07 07:49:40,527 ] root - INFO - Successfully loaded prompts configuration.
+[ 2026-09-07 07:49:40,527 ] root - INFO - Successfully initialized Writer and Critic chains.
+[ 2026-09-07 07:49:40,527 ] dagshub.auth.tokens - DEBUG - Loading token cache from /home/mg/.cache/dagshub/tokens
+[ 2026-09-07 07:49:40,536 ] httpcore.connection - DEBUG - connect_tcp.started host='dagshub.com' port=443 local_address=None timeout=30 socket_options=None
+[ 2026-09-07 07:49:40,645 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x759a0a9193d0>
+[ 2026-09-07 07:49:40,645 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x759a0a90efd0> server_hostname='dagshub.com' timeout=30
+[ 2026-09-07 07:49:40,769 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x759a0a918e60>
+[ 2026-09-07 07:49:40,769 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+[ 2026-09-07 07:49:40,769 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 07:49:40,769 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+[ 2026-09-07 07:49:40,769 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 07:49:40,769 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+[ 2026-09-07 07:49:40,979 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 04:49:40 GMT'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Vary', b'Accept-Encoding'), (b'Access-Control-Allow-Origin', b'*'), (b'Content-Security-Policy', b"frame-ancestors 'self' https://colab.research.google.com https://*.googleusercontent.com https://console.paperspace.com https://deepnoteworkspace.com https://deepnote.com https://*.mybinder.org; upgrade-insecure-requests;"), (b'Referrer-Policy', b'origin-when-cross-origin'), (b'Set-Cookie', b'lang=en-US; Path=/; Max-Age=2147483647'), (b'Set-Cookie', b'i_like_dags_new=c6f862fda6c8fad3; Path=/; HttpOnly; Secure; SameSite=Lax'), (b'Set-Cookie', b'_csrf=t1jjXEy792VHm0xcyuD0StgZ_No6MTc4ODc1NjU4MDgzMzExNzM3Nw; Path=/; Expires=Tue, 08 Sep 2026 04:49:40 GMT'), (b'Strict-Transport-Security', b'max-age=600;'), (b'X-Content-Type-Options', b'nosniff;'), (b'X-Dagshub-Support-Id', b'7a2b92f270e0aa357880a1853c6068aa'), (b'Cache-Control', b'private, no-store, no-cache, max-age=0, must-revalidate'), (b'Pragma', b'no-cache'), (b'Expires', b'0'), (b'Content-Encoding', b'gzip'), (b'x-azure-ref', b'20260907T044940Z-15694f8d864mqhdzhC1MIL075s00000016000000000053mw'), (b'X-Cache', b'CONFIG_NOCACHE')])
+[ 2026-09-07 07:49:40,980 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-09-07 07:49:40,980 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+[ 2026-09-07 07:49:40,980 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 07:49:40,980 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 07:49:40,980 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 07:49:40,980 ] httpcore.connection - DEBUG - close.started
+[ 2026-09-07 07:49:40,981 ] httpcore.connection - DEBUG - close.complete
+[ 2026-09-07 07:49:40,992 ] dagshub - INFO - Accessing as abdallahatefhatem
+[ 2026-09-07 07:49:41,000 ] httpcore.connection - DEBUG - connect_tcp.started host='dagshub.com' port=443 local_address=None timeout=30 socket_options=None
+[ 2026-09-07 07:49:41,065 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x759a0a919220>
+[ 2026-09-07 07:49:41,065 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x759a0a90efd0> server_hostname='dagshub.com' timeout=30
+[ 2026-09-07 07:49:41,190 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x759a0a91a060>
+[ 2026-09-07 07:49:41,190 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+[ 2026-09-07 07:49:41,190 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 07:49:41,190 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+[ 2026-09-07 07:49:41,190 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 07:49:41,190 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+[ 2026-09-07 07:49:41,428 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 04:49:41 GMT'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Vary', b'Accept-Encoding'), (b'Access-Control-Allow-Origin', b'*'), (b'Content-Security-Policy', b"frame-ancestors 'self' https://colab.research.google.com https://*.googleusercontent.com https://console.paperspace.com https://deepnoteworkspace.com https://deepnote.com https://*.mybinder.org; upgrade-insecure-requests;"), (b'Referrer-Policy', b'origin-when-cross-origin'), (b'Set-Cookie', b'lang=en-US; Path=/; Max-Age=2147483647'), (b'Set-Cookie', b'i_like_dags_new=31e0df9c4ef43846; Path=/; HttpOnly; Secure; SameSite=Lax'), (b'Set-Cookie', b'_csrf=dBPxN9L5onH-6VMw56AksFbKzx86MTc4ODc1NjU4MTI1NTY4NzQ3Mg; Path=/; Expires=Tue, 08 Sep 2026 04:49:41 GMT'), (b'Strict-Transport-Security', b'max-age=600;'), (b'X-Content-Type-Options', b'nosniff;'), (b'X-Dagshub-Support-Id', b'8e92b544d76a9a94f281e53dc1885903'), (b'Cache-Control', b'private, no-store, no-cache, max-age=0, must-revalidate'), (b'Pragma', b'no-cache'), (b'Expires', b'0'), (b'Content-Encoding', b'gzip'), (b'x-azure-ref', b'20260907T044941Z-15694f8d8644sxrnhC1MILtwmn00000016bg00000000au3h'), (b'X-Cache', b'CONFIG_NOCACHE')])
+[ 2026-09-07 07:49:41,430 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/abdallahatefhatem/LangChain-Multi-Agent-Research-System "HTTP/1.1 200 OK"
+[ 2026-09-07 07:49:41,430 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+[ 2026-09-07 07:49:41,431 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 07:49:41,431 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 07:49:41,431 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 07:49:41,432 ] httpcore.connection - DEBUG - close.started
+[ 2026-09-07 07:49:41,432 ] httpcore.connection - DEBUG - close.complete
+[ 2026-09-07 07:49:41,440 ] httpcore.connection - DEBUG - connect_tcp.started host='dagshub.com' port=443 local_address=None timeout=30 socket_options=None
+[ 2026-09-07 07:49:41,506 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x759a0a794f20>
+[ 2026-09-07 07:49:41,506 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x759a0a7a85d0> server_hostname='dagshub.com' timeout=30
+[ 2026-09-07 07:49:41,635 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x759a0a794dd0>
+[ 2026-09-07 07:49:41,635 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+[ 2026-09-07 07:49:41,635 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 07:49:41,635 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+[ 2026-09-07 07:49:41,635 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 07:49:41,635 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+[ 2026-09-07 07:49:42,101 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 04:49:42 GMT'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Vary', b'Accept-Encoding'), (b'Access-Control-Allow-Origin', b'*'), (b'Content-Security-Policy', b"frame-ancestors 'self' https://colab.research.google.com https://*.googleusercontent.com https://console.paperspace.com https://deepnoteworkspace.com https://deepnote.com https://*.mybinder.org; upgrade-insecure-requests;"), (b'Referrer-Policy', b'origin-when-cross-origin'), (b'Set-Cookie', b'lang=en-US; Path=/; Max-Age=2147483647'), (b'Set-Cookie', b'i_like_dags_new=53aa279bb318a64f; Path=/; HttpOnly; Secure; SameSite=Lax'), (b'Set-Cookie', b'_csrf=2NPQtCqcT5VHt9wRAe_YjJ3mHns6MTc4ODc1NjU4MTk1NjIwNzk5Ng; Path=/; Expires=Tue, 08 Sep 2026 04:49:41 GMT'), (b'Strict-Transport-Security', b'max-age=600;'), (b'X-Content-Type-Options', b'nosniff;'), (b'X-Dagshub-Support-Id', b'67346b48c47b8bee5dd64ae9e8700ddf'), (b'Cache-Control', b'private, no-store, no-cache, max-age=0, must-revalidate'), (b'Pragma', b'no-cache'), (b'Expires', b'0'), (b'Content-Encoding', b'gzip'), (b'x-azure-ref', b'20260907T044941Z-15694f8d864gvdqmhC1MIL570g00000015u0000000003vua'), (b'X-Cache', b'CONFIG_NOCACHE')])
+[ 2026-09-07 07:49:42,102 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-09-07 07:49:42,102 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+[ 2026-09-07 07:49:42,102 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 07:49:42,102 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 07:49:42,102 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 07:49:42,102 ] httpcore.connection - DEBUG - close.started
+[ 2026-09-07 07:49:42,103 ] httpcore.connection - DEBUG - close.complete
+[ 2026-09-07 07:49:42,104 ] dagshub - INFO - Initialized MLflow to track repo "abdallahatefhatem/LangChain-Multi-Agent-Research-System"
+[ 2026-09-07 07:49:42,106 ] dagshub - INFO - Repository abdallahatefhatem/LangChain-Multi-Agent-Research-System initialized!
+[ 2026-09-07 07:49:42,106 ] root - INFO - Starting multi-agent research pipeline for topic: 'who is messi?'
+[ 2026-09-07 07:49:42,106 ] root - INFO - Step 1/4: Executing Search Agent...
+[ 2026-09-07 07:49:42,418 ] httpcore.connection - DEBUG - connect_tcp.started host='openrouter.ai' port=443 local_address=None timeout=5.0 socket_options=None
+[ 2026-09-07 07:49:42,466 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x759a0a4d7bf0>
+[ 2026-09-07 07:49:42,466 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x759a0aa6da50> server_hostname='openrouter.ai' timeout=5.0
+[ 2026-09-07 07:49:42,516 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x759a0a4d7b00>
+[ 2026-09-07 07:49:42,516 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 07:49:42,517 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 07:49:42,517 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 07:49:42,517 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 07:49:42,517 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 07:49:43,404 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 04:49:43 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788756582-oAAzqttaEPbB8pp5kqbg'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'set-cookie', b'__cf_bm=ZhDj5WPWA029VoX52FGk8O7lQnlqjQAW5Zgy9V9piNM-1788756582.5104835-1.0.1.1-sICevLkYTNt5F_QkE1MVLYN8KJChVWNRGRbb37DKsD_vRnapCTrCdJHexjzDKJv38hkX_hpjqdkCn0rTEskGGo4s_R3KdGfbLP20Nd167ORJJm4mTl2XNEubpR_DkEcD; HttpOnly; SameSite=None; Secure; Path=/; Domain=openrouter.ai; Expires=Mon, 07 Sep 2026 05:19:43 GMT'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a37316a0aeb6cac8-MRS')])
+[ 2026-09-07 07:49:43,405 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 07:49:43,406 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 07:49:43,417 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 07:49:43,417 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 07:49:43,418 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 07:49:43,426 ] root - INFO - Search Agent completed successfully.
+[ 2026-09-07 07:49:43,426 ] root - INFO - Step 2/4: Executing Reader Agent (Scraping)...
+[ 2026-09-07 07:49:43,471 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 07:49:43,472 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 07:49:43,472 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 07:49:43,472 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 07:49:43,472 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 07:49:44,408 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 04:49:44 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788756583-hHUsdyL3Vmk75UgdWdQh'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a37316a6ad24cac8-MRS')])
+[ 2026-09-07 07:49:44,408 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 07:49:44,408 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 07:49:47,142 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 07:49:47,143 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 07:49:47,143 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 07:49:47,146 ] root - INFO - Reader Agent completed scraping.
+[ 2026-09-07 07:49:47,146 ] root - INFO - Step 3/4: Executing Writer Chain...
+[ 2026-09-07 07:49:47,171 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 07:49:47,172 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 07:49:47,172 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 07:49:47,172 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 07:49:47,172 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 07:49:48,190 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 04:49:48 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788756587-4RzQpSUkU8C3sQ2rkZSi'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a37316bdcaffcac8-MRS')])
+[ 2026-09-07 07:49:48,190 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 07:49:48,190 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 07:50:01,170 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 07:50:01,170 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 07:50:01,170 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 07:50:01,177 ] root - INFO - Writer Chain completed drafting report.
+[ 2026-09-07 07:50:01,178 ] root - INFO - Step 4/4: Executing Critic Chain...
+[ 2026-09-07 07:50:01,220 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 07:50:01,221 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 07:50:01,221 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 07:50:01,221 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 07:50:01,221 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 07:50:02,252 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 04:50:02 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788756601-2yEqFqIDq8Vgq74gLNGs'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a37317159bfacac8-MRS')])
+[ 2026-09-07 07:50:02,253 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 07:50:02,253 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 07:50:09,495 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 07:50:09,495 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 07:50:09,496 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 07:50:09,503 ] root - INFO - Critic Chain completed report review.
+[ 2026-09-07 07:50:09,503 ] root - INFO - Research pipeline finished successfully.
+[ 2026-09-07 07:50:09,696 ] git.cmd - DEBUG - Popen(['git', 'version'], cwd=/home/mg/my_venv, stdin=None, shell=False, universal_newlines=False)
+[ 2026-09-07 07:50:09,698 ] git.cmd - DEBUG - Popen(['git', 'version'], cwd=/home/mg/my_venv, stdin=None, shell=False, universal_newlines=False)
+[ 2026-09-07 07:50:09,700 ] git.util - DEBUG - sys.platform='linux', git_executable='git'
+[ 2026-09-07 07:50:09,700 ] git.cmd - DEBUG - Popen(['git', 'check-ignore', '/home/mg/my_venv/src/pipeline'], cwd=/home/mg/my_venv, stdin=None, shell=False, universal_newlines=False)
+[ 2026-09-07 07:50:09,702 ] git.cmd - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/mg/my_venv, stdin=<valid stream>, shell=False, universal_newlines=False)
+[ 2026-09-07 07:50:09,704 ] git.util - DEBUG - sys.platform='linux', git_executable='git'
+[ 2026-09-07 07:50:09,705 ] git.util - DEBUG - sys.platform='linux', git_executable='git'
+[ 2026-09-07 07:50:09,731 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): dagshub.com:443
+[ 2026-09-07 07:50:10,862 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/create HTTP/1.1" 200 None
+[ 2026-09-07 07:50:10,865 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): config.mlflow-telemetry.io:443
+[ 2026-09-07 07:50:11,150 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2026-09-07 07:50:11,167 ] urllib3.connectionpool - DEBUG - https://config.mlflow-telemetry.io:443 "GET /3.16.0.json HTTP/1.1" 200 308
+[ 2026-09-07 07:50:11,469 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/log-metric HTTP/1.1" 200 2
+[ 2026-09-07 07:50:11,741 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/log-metric HTTP/1.1" 200 2
+[ 2026-09-07 07:50:12,073 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "GET /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/get?run_uuid=3be09b4ef01e4f22b31298ff5e01e424&run_id=3be09b4ef01e4f22b31298ff5e01e424 HTTP/1.1" 200 None
+[ 2026-09-07 07:50:12,267 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): dagshub.com:443
+[ 2026-09-07 07:50:12,485 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "PUT /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow-artifacts/artifacts/21dcbab858a74ea2a3a4678a6f2b21ed/3be09b4ef01e4f22b31298ff5e01e424/artifacts/final_report.txt HTTP/1.1" 200 2
+[ 2026-09-07 07:50:12,772 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "PUT /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow-artifacts/artifacts/21dcbab858a74ea2a3a4678a6f2b21ed/3be09b4ef01e4f22b31298ff5e01e424/artifacts/critic_feedback.txt HTTP/1.1" 200 2
+[ 2026-09-07 07:50:12,946 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "GET /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/3.0/mlflow/server-info HTTP/1.1" 404 None
+[ 2026-09-07 07:50:12,949 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.mlflow-telemetry.io:443
+[ 2026-09-07 07:50:13,041 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "GET /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/get?run_uuid=3be09b4ef01e4f22b31298ff5e01e424&run_id=3be09b4ef01e4f22b31298ff5e01e424 HTTP/1.1" 200 None
+[ 2026-09-07 07:50:13,319 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/update HTTP/1.1" 200 None

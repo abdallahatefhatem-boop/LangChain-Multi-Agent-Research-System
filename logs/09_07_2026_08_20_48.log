@@ -1,0 +1,639 @@
+[ 2026-09-07 08:20:48,786 ] root - INFO - get tavily api key....
+[ 2026-09-07 08:20:48,787 ] root - INFO - used tavily api key 
+[ 2026-09-07 08:20:48,972 ] root - INFO - Loading API key for OpenRouter...
+[ 2026-09-07 08:20:49,014 ] root - INFO - LLM initialized successfully via ChatOpenRouter.
+[ 2026-09-07 08:20:49,014 ] root - INFO - building search agent ....
+[ 2026-09-07 08:20:49,014 ] root - INFO - Done build search agent
+[ 2026-09-07 08:20:49,014 ] root - INFO - building reader agent .....
+[ 2026-09-07 08:20:49,014 ] root - INFO - Done build reader agent
+[ 2026-09-07 08:20:49,014 ] root - INFO - Loading prompt configurations from YAML file...
+[ 2026-09-07 08:20:49,015 ] root - INFO - Successfully loaded prompts configuration.
+[ 2026-09-07 08:20:49,016 ] root - INFO - Successfully initialized Writer and Critic chains.
+[ 2026-09-07 08:20:49,016 ] dagshub.auth.tokens - DEBUG - Loading token cache from /home/mg/.cache/dagshub/tokens
+[ 2026-09-07 08:20:49,025 ] httpcore.connection - DEBUG - connect_tcp.started host='dagshub.com' port=443 local_address=None timeout=30 socket_options=None
+[ 2026-09-07 08:20:49,091 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7d58fdcdef30>
+[ 2026-09-07 08:20:49,091 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7d58fdb65250> server_hostname='dagshub.com' timeout=30
+[ 2026-09-07 08:20:49,205 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7d58fdcc1790>
+[ 2026-09-07 08:20:49,205 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+[ 2026-09-07 08:20:49,206 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:20:49,206 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+[ 2026-09-07 08:20:49,206 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:20:49,206 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+[ 2026-09-07 08:20:49,623 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:20:49 GMT'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Vary', b'Accept-Encoding'), (b'Access-Control-Allow-Origin', b'*'), (b'Content-Security-Policy', b"frame-ancestors 'self' https://colab.research.google.com https://*.googleusercontent.com https://console.paperspace.com https://deepnoteworkspace.com https://deepnote.com https://*.mybinder.org; upgrade-insecure-requests;"), (b'Referrer-Policy', b'origin-when-cross-origin'), (b'Set-Cookie', b'lang=en-US; Path=/; Max-Age=2147483647'), (b'Set-Cookie', b'i_like_dags_new=974062e9a4ee06fc; Path=/; HttpOnly; Secure; SameSite=Lax'), (b'Set-Cookie', b'_csrf=4h-t2tCsvjCn70kBPlonEAe8rw46MTc4ODc1ODQ0OTUzODc4MTg4MA; Path=/; Expires=Tue, 08 Sep 2026 05:20:49 GMT'), (b'Strict-Transport-Security', b'max-age=600;'), (b'X-Content-Type-Options', b'nosniff;'), (b'X-Dagshub-Support-Id', b'c950b0e12e3b9d2297605e82f82b95de'), (b'Cache-Control', b'private, no-store, no-cache, max-age=0, must-revalidate'), (b'Pragma', b'no-cache'), (b'Expires', b'0'), (b'Content-Encoding', b'gzip'), (b'x-azure-ref', b'20260907T052049Z-16bc99b5fc59zslwhC1MILvrew0000000emg000000005mc1'), (b'X-Cache', b'CONFIG_NOCACHE')])
+[ 2026-09-07 08:20:49,624 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-09-07 08:20:49,624 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+[ 2026-09-07 08:20:49,625 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:20:49,625 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:20:49,625 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:20:49,625 ] httpcore.connection - DEBUG - close.started
+[ 2026-09-07 08:20:49,626 ] httpcore.connection - DEBUG - close.complete
+[ 2026-09-07 08:20:49,631 ] dagshub - INFO - Accessing as abdallahatefhatem
+[ 2026-09-07 08:20:49,638 ] httpcore.connection - DEBUG - connect_tcp.started host='dagshub.com' port=443 local_address=None timeout=30 socket_options=None
+[ 2026-09-07 08:20:49,698 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7d58fdbbeed0>
+[ 2026-09-07 08:20:49,698 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7d58fdb65250> server_hostname='dagshub.com' timeout=30
+[ 2026-09-07 08:20:49,815 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7d58fdbbf2c0>
+[ 2026-09-07 08:20:49,816 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+[ 2026-09-07 08:20:49,816 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:20:49,816 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+[ 2026-09-07 08:20:49,816 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:20:49,816 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+[ 2026-09-07 08:20:50,298 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:20:50 GMT'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Vary', b'Accept-Encoding'), (b'Access-Control-Allow-Origin', b'*'), (b'Content-Security-Policy', b"frame-ancestors 'self' https://colab.research.google.com https://*.googleusercontent.com https://console.paperspace.com https://deepnoteworkspace.com https://deepnote.com https://*.mybinder.org; upgrade-insecure-requests;"), (b'Referrer-Policy', b'origin-when-cross-origin'), (b'Set-Cookie', b'lang=en-US; Path=/; Max-Age=2147483647'), (b'Set-Cookie', b'i_like_dags_new=79e70e72295db331; Path=/; HttpOnly; Secure; SameSite=Lax'), (b'Set-Cookie', b'_csrf=FRA1edofoVvX6SczmRLqZ766Snc6MTc4ODc1ODQ1MDE3MDkzMzcwMQ; Path=/; Expires=Tue, 08 Sep 2026 05:20:50 GMT'), (b'Strict-Transport-Security', b'max-age=600;'), (b'X-Content-Type-Options', b'nosniff;'), (b'X-Dagshub-Support-Id', b'51c81a027d231cb3d40f5faec29ae7fe'), (b'Cache-Control', b'private, no-store, no-cache, max-age=0, must-revalidate'), (b'Pragma', b'no-cache'), (b'Expires', b'0'), (b'Content-Encoding', b'gzip'), (b'x-azure-ref', b'20260907T052049Z-16bc99b5fc5cnrsmhC1MILmtv0000000172g000000009mza'), (b'X-Cache', b'CONFIG_NOCACHE')])
+[ 2026-09-07 08:20:50,298 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/abdallahatefhatem/LangChain-Multi-Agent-Research-System "HTTP/1.1 200 OK"
+[ 2026-09-07 08:20:50,299 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+[ 2026-09-07 08:20:50,300 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:20:50,300 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:20:50,300 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:20:50,300 ] httpcore.connection - DEBUG - close.started
+[ 2026-09-07 08:20:50,302 ] httpcore.connection - DEBUG - close.complete
+[ 2026-09-07 08:20:50,314 ] httpcore.connection - DEBUG - connect_tcp.started host='dagshub.com' port=443 local_address=None timeout=30 socket_options=None
+[ 2026-09-07 08:20:50,377 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7d5956f84230>
+[ 2026-09-07 08:20:50,377 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7d58fdb66450> server_hostname='dagshub.com' timeout=30
+[ 2026-09-07 08:20:50,498 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7d58fdbbe3f0>
+[ 2026-09-07 08:20:50,499 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'GET']>
+[ 2026-09-07 08:20:50,500 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:20:50,500 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'GET']>
+[ 2026-09-07 08:20:50,500 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:20:50,501 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'GET']>
+[ 2026-09-07 08:20:50,951 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:20:50 GMT'), (b'Content-Type', b'application/json; charset=UTF-8'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Vary', b'Accept-Encoding'), (b'Access-Control-Allow-Origin', b'*'), (b'Content-Security-Policy', b"frame-ancestors 'self' https://colab.research.google.com https://*.googleusercontent.com https://console.paperspace.com https://deepnoteworkspace.com https://deepnote.com https://*.mybinder.org; upgrade-insecure-requests;"), (b'Referrer-Policy', b'origin-when-cross-origin'), (b'Set-Cookie', b'lang=en-US; Path=/; Max-Age=2147483647'), (b'Set-Cookie', b'i_like_dags_new=67a90693fede1a50; Path=/; HttpOnly; Secure; SameSite=Lax'), (b'Set-Cookie', b'_csrf=11sfn6PDR2x3m0syG-X4_igpbEI6MTc4ODc1ODQ1MDg2NTUzMDE1Nw; Path=/; Expires=Tue, 08 Sep 2026 05:20:50 GMT'), (b'Strict-Transport-Security', b'max-age=600;'), (b'X-Content-Type-Options', b'nosniff;'), (b'X-Dagshub-Support-Id', b'909b7d30bd09d5ba7b638c3b1a6104db'), (b'Cache-Control', b'private, no-store, no-cache, max-age=0, must-revalidate'), (b'Pragma', b'no-cache'), (b'Expires', b'0'), (b'Content-Encoding', b'gzip'), (b'x-azure-ref', b'20260907T052050Z-16bc99b5fc5n4m8hhC1MILs0ac00000017u0000000005b7u'), (b'X-Cache', b'CONFIG_NOCACHE')])
+[ 2026-09-07 08:20:50,951 ] httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-09-07 08:20:50,952 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'GET']>
+[ 2026-09-07 08:20:50,952 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:20:50,952 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:20:50,953 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:20:50,953 ] httpcore.connection - DEBUG - close.started
+[ 2026-09-07 08:20:50,953 ] httpcore.connection - DEBUG - close.complete
+[ 2026-09-07 08:20:50,954 ] dagshub - INFO - Initialized MLflow to track repo "abdallahatefhatem/LangChain-Multi-Agent-Research-System"
+[ 2026-09-07 08:20:50,954 ] dagshub - INFO - Repository abdallahatefhatem/LangChain-Multi-Agent-Research-System initialized!
+[ 2026-09-07 08:21:17,401 ] root - INFO - Starting multi-agent research pipeline for topic: 'what is langchain?'
+[ 2026-09-07 08:21:17,401 ] root - INFO - Step 1/4: Executing Search Agent...
+[ 2026-09-07 08:21:17,767 ] httpcore.connection - DEBUG - connect_tcp.started host='openrouter.ai' port=443 local_address=None timeout=5.0 socket_options=None
+[ 2026-09-07 08:21:17,810 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7d58fd983920>
+[ 2026-09-07 08:21:17,810 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7d58fdcafc50> server_hostname='openrouter.ai' timeout=5.0
+[ 2026-09-07 08:21:17,861 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7d58fc6dab10>
+[ 2026-09-07 08:21:17,862 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:17,862 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:21:17,863 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:17,863 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:21:17,864 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:19,378 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:21:19 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788758478-wzzEHGQaZnhNDhrrhGuM'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'set-cookie', b'__cf_bm=4XXb80J25lw8qGhjmam_Gf5NQERwYBKnXME7HbmZlAA-1788758477.8869455-1.0.1.1-9D7JXe7cgTfqhhrls9ZlDdJAeDZRtmLNDM2QWcTKuNcLCp3nSpQHtty6ZgJB43KPmeqYQezdBdmLY8B8Vhe.VvzpVZAFjL3ZNsobALmZyAXEEIN.25TY0UgG832krjva; HttpOnly; SameSite=None; Secure; Path=/; Domain=openrouter.ai; Expires=Mon, 07 Sep 2026 05:51:19 GMT'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a37344e6c9d9f0de-MRS')])
+[ 2026-09-07 08:21:19,379 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 08:21:19,379 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:24,939 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:21:24,940 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:21:24,940 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:21:24,947 ] root - INFO - Search Agent completed successfully.
+[ 2026-09-07 08:21:24,948 ] root - INFO - Step 2/4: Executing Reader Agent (Scraping)...
+[ 2026-09-07 08:21:24,995 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:24,996 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:21:24,996 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:24,997 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:21:24,998 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:26,069 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:21:26 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788758485-hk2qLE9LZLi0K6Fk9gR0'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a3734513690af0de-MRS')])
+[ 2026-09-07 08:21:26,069 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 08:21:26,069 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:26,609 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:21:26,609 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:21:26,610 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:21:26,619 ] root - INFO - Starting URL scraping for: https://python.langchain.com/docs/introduction/
+[ 2026-09-07 08:21:26,619 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-07 08:21:26,625 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): python.langchain.com:443
+[ 2026-09-07 08:21:26,628 ] root - INFO - Starting URL scraping for: https://www.langchain.com/
+[ 2026-09-07 08:21:26,629 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-07 08:21:26,631 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.langchain.com:443
+[ 2026-09-07 08:21:27,084 ] urllib3.connectionpool - DEBUG - https://www.langchain.com:443 "GET / HTTP/1.1" 200 None
+[ 2026-09-07 08:21:27,121 ] urllib3.connectionpool - DEBUG - https://python.langchain.com:443 "GET /docs/introduction/ HTTP/1.1" 308 None
+[ 2026-09-07 08:21:27,147 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-07 08:21:27,221 ] urllib3.connectionpool - DEBUG - https://python.langchain.com:443 "GET /docs/introduction HTTP/1.1" 308 None
+[ 2026-09-07 08:21:27,224 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): docs.langchain.com:443
+[ 2026-09-07 08:21:27,262 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 34/34 – short elems/total: 3/4
+[ 2026-09-07 08:21:27,262 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-07 08:21:27,263 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:21:27,263 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:21:27,263 ] trafilatura.main_extractor - DEBUG - (.//article)[1]
+[ 2026-09-07 08:21:27,282 ] trafilatura.readability_lxml - DEBUG - Top 5: div 32.51
+[ 2026-09-07 08:21:27,282 ] trafilatura.readability_lxml - DEBUG - Top 5: div 31.71
+[ 2026-09-07 08:21:27,282 ] trafilatura.readability_lxml - DEBUG - Top 5: div 31.635
+[ 2026-09-07 08:21:27,282 ] trafilatura.readability_lxml - DEBUG - Top 5: div 31.195
+[ 2026-09-07 08:21:27,282 ] trafilatura.readability_lxml - DEBUG - Top 5: div 29.42923076923077
+[ 2026-09-07 08:21:27,283 ] trafilatura.readability_lxml - DEBUG - Removed  0.000 div with weight 0 cause it has too short content length 0 without a single image.
+[ 2026-09-07 08:21:27,283 ] trafilatura.readability_lxml - DEBUG - Removed div with score  0.000 and weight -25
+[ 2026-09-07 08:21:27,284 ] trafilatura.external - DEBUG - extracted length: 104 (algorithm) 265 (extraction)
+[ 2026-09-07 08:21:27,284 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-07 08:21:27,312 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 34/34 – short elems/total: 3/4
+[ 2026-09-07 08:21:27,313 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-07 08:21:27,313 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:21:27,313 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:21:27,313 ] trafilatura.main_extractor - DEBUG - (.//article)[1]
+[ 2026-09-07 08:21:27,328 ] trafilatura.readability_lxml - DEBUG - Top 5: div 32.51
+[ 2026-09-07 08:21:27,328 ] trafilatura.readability_lxml - DEBUG - Top 5: div 31.71
+[ 2026-09-07 08:21:27,328 ] trafilatura.readability_lxml - DEBUG - Top 5: div 31.635
+[ 2026-09-07 08:21:27,328 ] trafilatura.readability_lxml - DEBUG - Top 5: div 31.195
+[ 2026-09-07 08:21:27,328 ] trafilatura.readability_lxml - DEBUG - Top 5: div 29.42923076923077
+[ 2026-09-07 08:21:27,329 ] trafilatura.readability_lxml - DEBUG - Removed  0.000 div with weight 0 cause it has too short content length 0 without a single image.
+[ 2026-09-07 08:21:27,329 ] trafilatura.readability_lxml - DEBUG - Removed div with score  0.000 and weight -25
+[ 2026-09-07 08:21:27,330 ] trafilatura.external - DEBUG - extracted length: 104 (algorithm) 265 (extraction)
+[ 2026-09-07 08:21:27,330 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-07 08:21:27,561 ] root - INFO - Successfully extracted content using Trafilatura.
+[ 2026-09-07 08:21:27,669 ] urllib3.connectionpool - DEBUG - https://docs.langchain.com:443 "GET /oss/python/langchain/overview HTTP/1.1" 200 None
+[ 2026-09-07 08:21:27,802 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-07 08:21:27,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 1/1 – short elems/total: 1/1
+[ 2026-09-07 08:21:27,869 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 1/1 – short elems/total: 1/1
+[ 2026-09-07 08:21:27,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 55/119 – short elems/total: 0/3
+[ 2026-09-07 08:21:27,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:21:27,870 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:21:27,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 37/42 – short elems/total: 0/2
+[ 2026-09-07 08:21:27,871 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 37/42 – short elems/total: 0/2
+[ 2026-09-07 08:21:27,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:21:27,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:21:27,872 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:21:27,872 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'div', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-07 08:21:27,873 ] trafilatura.main_extractor - DEBUG - (.//*[self::article or self::div or self::main or self::section][ @id='content' or @class='content' or re:test(@id, 'content-main|content-body|contentBody') or re:test(@class, 'content[-_]main|content(?:-|__)body') or contains(translate(@id, 'CM','cm'), 'main-content') or contains(translate(@class, 'CM','cm'), 'main-content') or contains(translate(@class, 'CP','cp'), 'page-content') ])[1]
+[ 2026-09-07 08:21:27,914 ] trafilatura.readability_lxml - DEBUG - Top 5: div 41.0
+[ 2026-09-07 08:21:27,914 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:21:27,914 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:21:27,914 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:21:27,914 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:21:27,915 ] trafilatura.external - DEBUG - extracted length: 628 (algorithm) 1479 (extraction)
+[ 2026-09-07 08:21:27,915 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-07 08:21:27,984 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 1/1 – short elems/total: 1/1
+[ 2026-09-07 08:21:27,985 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 1/1 – short elems/total: 1/1
+[ 2026-09-07 08:21:27,985 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 55/119 – short elems/total: 0/3
+[ 2026-09-07 08:21:27,986 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:21:27,986 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:21:27,986 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 37/42 – short elems/total: 0/2
+[ 2026-09-07 08:21:27,987 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 37/42 – short elems/total: 0/2
+[ 2026-09-07 08:21:27,987 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:21:27,988 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:21:27,988 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:21:27,988 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'div', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-07 08:21:27,988 ] trafilatura.main_extractor - DEBUG - (.//*[self::article or self::div or self::main or self::section][ @id='content' or @class='content' or re:test(@id, 'content-main|content-body|contentBody') or re:test(@class, 'content[-_]main|content(?:-|__)body') or contains(translate(@id, 'CM','cm'), 'main-content') or contains(translate(@class, 'CM','cm'), 'main-content') or contains(translate(@class, 'CP','cp'), 'page-content') ])[1]
+[ 2026-09-07 08:21:28,017 ] trafilatura.readability_lxml - DEBUG - Top 5: div 41.0
+[ 2026-09-07 08:21:28,017 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:21:28,017 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:21:28,017 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:21:28,018 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:21:28,019 ] trafilatura.external - DEBUG - extracted length: 628 (algorithm) 1479 (extraction)
+[ 2026-09-07 08:21:28,019 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-07 08:21:28,067 ] root - INFO - Successfully extracted content using Trafilatura.
+[ 2026-09-07 08:21:28,090 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:28,091 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:21:28,091 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:28,092 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:21:28,092 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:29,249 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:21:29 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788758488-i3BD3RGK73faBIyqsWqs'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a3734526bafef0de-MRS')])
+[ 2026-09-07 08:21:29,249 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 08:21:29,249 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:33,054 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:21:33,054 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:21:33,055 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:21:33,059 ] root - INFO - Reader Agent completed scraping.
+[ 2026-09-07 08:21:33,059 ] root - INFO - Step 3/4: Executing Writer Chain...
+[ 2026-09-07 08:21:33,078 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:33,079 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:21:33,079 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:33,079 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:21:33,080 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:34,260 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:21:34 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788758493-IFhJXL0uQFuXzNDR3A5M'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a3734545eb5df0de-MRS')])
+[ 2026-09-07 08:21:34,261 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 08:21:34,261 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:47,775 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:21:47,776 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:21:47,776 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:21:47,783 ] root - INFO - Writer Chain completed drafting report.
+[ 2026-09-07 08:21:47,784 ] root - INFO - Step 4/4: Executing Critic Chain...
+[ 2026-09-07 08:21:47,828 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:47,829 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:21:47,829 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:47,829 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:21:47,829 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:49,337 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:21:49 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788758507-tS0extm5359TzuGyHh9B'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a37345a218e1f0de-MRS')])
+[ 2026-09-07 08:21:49,338 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 08:21:49,338 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:21:55,896 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:21:55,896 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:21:55,896 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:21:55,901 ] root - INFO - Critic Chain completed report review.
+[ 2026-09-07 08:21:55,901 ] root - INFO - Research pipeline finished successfully.
+[ 2026-09-07 08:21:55,979 ] git.cmd - DEBUG - Popen(['git', 'version'], cwd=/home/mg/my_venv, stdin=None, shell=False, universal_newlines=False)
+[ 2026-09-07 08:21:55,986 ] git.cmd - DEBUG - Popen(['git', 'version'], cwd=/home/mg/my_venv, stdin=None, shell=False, universal_newlines=False)
+[ 2026-09-07 08:21:55,990 ] git.util - DEBUG - sys.platform='linux', git_executable='git'
+[ 2026-09-07 08:21:55,992 ] git.cmd - DEBUG - Popen(['git', 'check-ignore', '/home/mg/my_venv'], cwd=/home/mg/my_venv, stdin=None, shell=False, universal_newlines=False)
+[ 2026-09-07 08:21:55,998 ] git.cmd - DEBUG - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/mg/my_venv, stdin=<valid stream>, shell=False, universal_newlines=False)
+[ 2026-09-07 08:21:56,008 ] git.util - DEBUG - sys.platform='linux', git_executable='git'
+[ 2026-09-07 08:21:56,010 ] git.util - DEBUG - sys.platform='linux', git_executable='git'
+[ 2026-09-07 08:21:56,069 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): dagshub.com:443
+[ 2026-09-07 08:21:57,039 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/create HTTP/1.1" 200 None
+[ 2026-09-07 08:21:57,042 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): config.mlflow-telemetry.io:443
+[ 2026-09-07 08:21:57,299 ] urllib3.connectionpool - DEBUG - https://config.mlflow-telemetry.io:443 "GET /3.16.0.json HTTP/1.1" 200 308
+[ 2026-09-07 08:21:57,366 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2026-09-07 08:21:57,716 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/log-metric HTTP/1.1" 200 2
+[ 2026-09-07 08:21:58,010 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/log-metric HTTP/1.1" 200 2
+[ 2026-09-07 08:21:58,306 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "GET /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/get?run_uuid=0faec56866ad488a82be499afd68e4c4&run_id=0faec56866ad488a82be499afd68e4c4 HTTP/1.1" 200 None
+[ 2026-09-07 08:21:58,348 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): dagshub.com:443
+[ 2026-09-07 08:21:58,617 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "PUT /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow-artifacts/artifacts/21dcbab858a74ea2a3a4678a6f2b21ed/0faec56866ad488a82be499afd68e4c4/artifacts/final_report.txt HTTP/1.1" 200 2
+[ 2026-09-07 08:21:58,930 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "PUT /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow-artifacts/artifacts/21dcbab858a74ea2a3a4678a6f2b21ed/0faec56866ad488a82be499afd68e4c4/artifacts/critic_feedback.txt HTTP/1.1" 200 2
+[ 2026-09-07 08:21:59,017 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "GET /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/3.0/mlflow/server-info HTTP/1.1" 404 None
+[ 2026-09-07 08:21:59,019 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.mlflow-telemetry.io:443
+[ 2026-09-07 08:21:59,188 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "GET /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/get?run_uuid=0faec56866ad488a82be499afd68e4c4&run_id=0faec56866ad488a82be499afd68e4c4 HTTP/1.1" 200 None
+[ 2026-09-07 08:21:59,447 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/update HTTP/1.1" 200 None
+[ 2026-09-07 08:21:59,834 ] urllib3.connectionpool - DEBUG - https://api.mlflow-telemetry.io:443 "POST /log HTTP/1.1" 200 30
+[ 2026-09-07 08:23:33,034 ] root - INFO - Starting multi-agent research pipeline for topic: 'what is ai agent?'
+[ 2026-09-07 08:23:33,034 ] root - INFO - Step 1/4: Executing Search Agent...
+[ 2026-09-07 08:23:33,071 ] httpcore.connection - DEBUG - close.started
+[ 2026-09-07 08:23:33,072 ] httpcore.connection - DEBUG - close.complete
+[ 2026-09-07 08:23:33,073 ] httpcore.connection - DEBUG - connect_tcp.started host='openrouter.ai' port=443 local_address=None timeout=5.0 socket_options=None
+[ 2026-09-07 08:23:33,125 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7d5955518d70>
+[ 2026-09-07 08:23:33,126 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7d58fdcafc50> server_hostname='openrouter.ai' timeout=5.0
+[ 2026-09-07 08:23:33,185 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7d58d26d2330>
+[ 2026-09-07 08:23:33,186 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:33,186 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:23:33,186 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:33,186 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:23:33,187 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:34,477 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:23:34 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788758613-oyicbnL07rgxJf4MWnHU'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a37348349a53e238-MRS')])
+[ 2026-09-07 08:23:34,478 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 08:23:34,478 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:35,882 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:23:35,884 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:23:35,884 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:23:35,892 ] root - INFO - getting response....
+[ 2026-09-07 08:23:35,896 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.tavily.com:443
+[ 2026-09-07 08:23:35,900 ] root - INFO - getting response....
+[ 2026-09-07 08:23:35,903 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.tavily.com:443
+[ 2026-09-07 08:23:37,180 ] urllib3.connectionpool - DEBUG - https://api.tavily.com:443 "POST /search HTTP/1.1" 200 7449
+[ 2026-09-07 08:23:37,190 ] root - INFO - reuturn response
+[ 2026-09-07 08:23:37,192 ] root - INFO - appended title url content
+[ 2026-09-07 08:23:38,345 ] urllib3.connectionpool - DEBUG - https://api.tavily.com:443 "POST /search HTTP/1.1" 200 7307
+[ 2026-09-07 08:23:38,351 ] root - INFO - reuturn response
+[ 2026-09-07 08:23:38,352 ] root - INFO - appended title url content
+[ 2026-09-07 08:23:38,402 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:38,403 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:23:38,403 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:38,403 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:23:38,404 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:39,295 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:23:39 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788758618-mzGgz4Zp4zc7Z6M3xs1q'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a37348553f9ce238-MRS')])
+[ 2026-09-07 08:23:39,296 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 08:23:39,296 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:40,834 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:23:40,834 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:23:40,834 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:23:40,848 ] root - INFO - getting response....
+[ 2026-09-07 08:23:40,856 ] root - INFO - getting response....
+[ 2026-09-07 08:23:40,860 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.tavily.com:443
+[ 2026-09-07 08:23:40,860 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.tavily.com:443
+[ 2026-09-07 08:23:42,275 ] urllib3.connectionpool - DEBUG - https://api.tavily.com:443 "POST /search HTTP/1.1" 200 7034
+[ 2026-09-07 08:23:42,279 ] root - INFO - reuturn response
+[ 2026-09-07 08:23:42,281 ] root - INFO - appended title url content
+[ 2026-09-07 08:23:42,454 ] urllib3.connectionpool - DEBUG - https://api.tavily.com:443 "POST /search HTTP/1.1" 200 7694
+[ 2026-09-07 08:23:42,457 ] root - INFO - reuturn response
+[ 2026-09-07 08:23:42,458 ] root - INFO - appended title url content
+[ 2026-09-07 08:23:42,516 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:42,518 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:23:42,518 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:42,522 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:23:42,523 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:43,452 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:23:43 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788758622-4VzhhNNaoPP0HJ3DmXfJ'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a373486eeb28e238-MRS')])
+[ 2026-09-07 08:23:43,453 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 08:23:43,453 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:58,079 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:23:58,080 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:23:58,080 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:23:58,089 ] root - INFO - Search Agent completed successfully.
+[ 2026-09-07 08:23:58,090 ] root - INFO - Step 2/4: Executing Reader Agent (Scraping)...
+[ 2026-09-07 08:23:58,147 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:58,148 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:23:58,148 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:58,149 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:23:58,149 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:23:59,288 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:23:59 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788758638-MBfyib9AhUviw4tlLBkG'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a37348d09b2ae238-MRS')])
+[ 2026-09-07 08:23:59,289 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 08:23:59,289 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:00,449 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:24:00,450 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:24:00,451 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:24:00,469 ] root - INFO - Starting URL scraping for: https://www.ibm.com/think/topics/ai-agents
+[ 2026-09-07 08:24:00,470 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-07 08:24:00,498 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.ibm.com:443
+[ 2026-09-07 08:24:00,501 ] root - INFO - Starting URL scraping for: https://aws.amazon.com/what-is/ai-agents/
+[ 2026-09-07 08:24:00,501 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-07 08:24:00,508 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): aws.amazon.com:443
+[ 2026-09-07 08:24:00,513 ] root - INFO - Starting URL scraping for: https://www.langchain.com/ai-agents
+[ 2026-09-07 08:24:00,514 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-07 08:24:00,519 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.langchain.com:443
+[ 2026-09-07 08:24:00,798 ] urllib3.connectionpool - DEBUG - https://aws.amazon.com:443 "GET /what-is/ai-agents/ HTTP/1.1" 200 None
+[ 2026-09-07 08:24:00,822 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-07 08:24:00,882 ] urllib3.connectionpool - DEBUG - https://www.ibm.com:443 "GET /think/topics/ai-agents HTTP/1.1" 200 None
+[ 2026-09-07 08:24:00,911 ] urllib3.connectionpool - DEBUG - https://www.langchain.com:443 "GET /ai-agents HTTP/1.1" 404 None
+[ 2026-09-07 08:24:00,922 ] root - ERROR - HTTP error occurred while scraping https://www.langchain.com/ai-agents: 404 Client Error: Not Found for url: https://www.langchain.com/ai-agents
+[ 2026-09-07 08:24:00,959 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-07 08:24:01,000 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,001 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,002 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,003 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,004 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,004 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,004 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,005 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/41 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,005 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,005 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 21/21 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,033 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 232/252 – short elems/total: 0/3
+[ 2026-09-07 08:24:01,034 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 232/252 – short elems/total: 0/3
+[ 2026-09-07 08:24:01,035 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 232/252 – short elems/total: 0/3
+[ 2026-09-07 08:24:01,035 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 232/252 – short elems/total: 0/3
+[ 2026-09-07 08:24:01,036 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 232/252 – short elems/total: 0/3
+[ 2026-09-07 08:24:01,036 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 232/252 – short elems/total: 0/3
+[ 2026-09-07 08:24:01,036 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 232/252 – short elems/total: 0/3
+[ 2026-09-07 08:24:01,037 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 232/252 – short elems/total: 0/3
+[ 2026-09-07 08:24:01,038 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 232/252 – short elems/total: 0/3
+[ 2026-09-07 08:24:01,046 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 232/234 – short elems/total: 0/3
+[ 2026-09-07 08:24:01,047 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 57/57 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,049 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 57/57 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,051 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 77/77 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,054 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 77/77 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,058 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 98/98 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,059 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 98/98 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,063 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 53/53 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,085 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-07 08:24:01,093 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,093 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,094 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,095 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,095 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,096 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,096 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,096 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,096 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,096 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,096 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,096 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,096 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,097 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,097 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,097 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,097 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,097 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,097 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,097 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,098 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,099 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,099 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,099 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,099 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,099 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,099 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,099 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,099 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,099 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,099 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,100 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,100 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,100 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,100 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,100 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,100 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,100 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,100 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,101 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,101 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,101 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,101 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,101 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,101 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,101 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,102 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,102 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,102 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,102 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,102 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,102 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,103 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,103 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,103 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,103 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,103 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,103 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,103 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,103 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,103 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,103 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,104 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,104 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,104 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,104 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,104 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,104 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,104 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,104 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,104 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,104 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,105 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,105 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,105 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,105 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,105 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,106 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,106 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,106 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,106 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,106 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,106 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,106 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,107 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,107 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,107 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,107 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,107 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,107 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,108 ] trafilatura.main_extractor - DEBUG - discarding element: div Loading
+[ 2026-09-07 08:24:01,108 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,108 ] trafilatura.main_extractor - DEBUG - discarding element: div Loading
+[ 2026-09-07 08:24:01,108 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,109 ] trafilatura.main_extractor - DEBUG - discarding element: div Loading
+[ 2026-09-07 08:24:01,109 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,109 ] trafilatura.main_extractor - DEBUG - discarding element: div Loading
+[ 2026-09-07 08:24:01,109 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,110 ] trafilatura.main_extractor - DEBUG - discarding element: div Loading
+[ 2026-09-07 08:24:01,110 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,110 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,110 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,113 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,114 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,114 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,114 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,114 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,115 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,115 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,115 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,115 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,116 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,116 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,116 ] trafilatura.main_extractor - DEBUG - (.//*[self::article or self::div or self::section][ starts-with(@class, 'main') or starts-with(@id, 'main') or starts-with(@role, 'main')])[1]|(.//main)[1]
+[ 2026-09-07 08:24:01,122 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-07 08:24:01,134 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,135 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,143 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,149 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,186 ] trafilatura.readability_lxml - DEBUG - Top 5: div 110.68339100346022
+[ 2026-09-07 08:24:01,186 ] trafilatura.readability_lxml - DEBUG - Top 5: div 69.05
+[ 2026-09-07 08:24:01,186 ] trafilatura.readability_lxml - DEBUG - Top 5: div 68.02
+[ 2026-09-07 08:24:01,187 ] trafilatura.readability_lxml - DEBUG - Top 5: div 57.837037529944105
+[ 2026-09-07 08:24:01,188 ] trafilatura.readability_lxml - DEBUG - Top 5: div 46.09691583284285
+[ 2026-09-07 08:24:01,190 ] trafilatura.external - DEBUG - extracted length: 3757 (algorithm) 17278 (extraction)
+[ 2026-09-07 08:24:01,191 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-07 08:24:01,223 ] root - INFO - Successfully extracted content using Trafilatura.
+[ 2026-09-07 08:24:01,247 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-07 08:24:01,250 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,250 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-07 08:24:01,254 ] trafilatura.main_extractor - DEBUG - Recovering wild text elements
+[ 2026-09-07 08:24:01,302 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 37/127 – short elems/total: 1/2
+[ 2026-09-07 08:24:01,305 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 11/242 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,310 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 65/95 – short elems/total: 0/2
+[ 2026-09-07 08:24:01,310 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 65/95 – short elems/total: 0/2
+[ 2026-09-07 08:24:01,312 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 65/95 – short elems/total: 0/2
+[ 2026-09-07 08:24:01,349 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 37/127 – short elems/total: 1/2
+[ 2026-09-07 08:24:01,352 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 11/242 – short elems/total: 0/1
+[ 2026-09-07 08:24:01,363 ] trafilatura.main_extractor - DEBUG - extra in p: p Example: If it is 8 PM, then the heating is activated—for instance, a thermostat that turns on the heating system at a set time every night.
+[ 2026-09-07 08:24:01,364 ] trafilatura.main_extractor - DEBUG - extra in p: p 1. Andrew Zhao, Daniel Huang, Quentin Xu, Matthieu Lin, Yong-Jin Liu and Gao Huang, “Expel: LLM agents are experiential learners,” Proceedings of the AAAI conference on artificial intelligence, Vol. 38, No. 17, pp. 19632-19642, 2024, https://ojs.aaai.org/index.php/AAAI/article/view/29936
+[ 2026-09-07 08:24:01,436 ] trafilatura.readability_lxml - DEBUG - Top 5: div 96.46284764542938
+[ 2026-09-07 08:24:01,436 ] trafilatura.readability_lxml - DEBUG - Top 5: div 76.38226495726495
+[ 2026-09-07 08:24:01,436 ] trafilatura.readability_lxml - DEBUG - Top 5: div 75.49
+[ 2026-09-07 08:24:01,437 ] trafilatura.readability_lxml - DEBUG - Top 5: div 75.23
+[ 2026-09-07 08:24:01,437 ] trafilatura.readability_lxml - DEBUG - Top 5: div 73.61
+[ 2026-09-07 08:24:01,438 ] trafilatura.external - DEBUG - extracted length: 1805 (algorithm) 23330 (extraction)
+[ 2026-09-07 08:24:01,438 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-07 08:24:01,456 ] root - INFO - Successfully extracted content using Trafilatura.
+[ 2026-09-07 08:24:01,508 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:01,509 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:24:01,510 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:01,513 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:24:01,514 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:02,682 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:24:02 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788758641-Lga8iqRirSpG7zaVxtbg'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a37348e59dd4e238-MRS')])
+[ 2026-09-07 08:24:02,683 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 08:24:02,683 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:03,427 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:24:03,429 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:24:03,429 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:24:03,436 ] root - INFO - Starting URL scraping for: https://blog.langchain.com/what-is-an-ai-agent/
+[ 2026-09-07 08:24:03,436 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-07 08:24:03,437 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): blog.langchain.com:443
+[ 2026-09-07 08:24:03,831 ] urllib3.connectionpool - DEBUG - https://blog.langchain.com:443 "GET /what-is-an-ai-agent/ HTTP/1.1" 301 162
+[ 2026-09-07 08:24:03,833 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.langchain.com:443
+[ 2026-09-07 08:24:04,665 ] urllib3.connectionpool - DEBUG - https://www.langchain.com:443 "GET /blog/what-is-an-ai-agent HTTP/1.1" 404 None
+[ 2026-09-07 08:24:04,667 ] root - ERROR - HTTP error occurred while scraping https://blog.langchain.com/what-is-an-ai-agent/: 404 Client Error: Not Found for url: https://www.langchain.com/blog/what-is-an-ai-agent
+[ 2026-09-07 08:24:04,792 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:04,797 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:24:04,798 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:04,805 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:24:04,805 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:05,969 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:24:05 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788758644-mrI7fJntAy6tquGfgnuA'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a37348fa2e6ce238-MRS')])
+[ 2026-09-07 08:24:05,970 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 08:24:05,971 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:06,299 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:24:06,300 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:24:06,300 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:24:06,310 ] root - INFO - Starting URL scraping for: https://python.langchain.com/docs/concepts/agents/
+[ 2026-09-07 08:24:06,311 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-07 08:24:06,318 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): python.langchain.com:443
+[ 2026-09-07 08:24:06,528 ] urllib3.connectionpool - DEBUG - https://python.langchain.com:443 "GET /docs/concepts/agents/ HTTP/1.1" 308 None
+[ 2026-09-07 08:24:06,601 ] urllib3.connectionpool - DEBUG - https://python.langchain.com:443 "GET /docs/concepts/agents HTTP/1.1" 308 None
+[ 2026-09-07 08:24:06,602 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): docs.langchain.com:443
+[ 2026-09-07 08:24:06,816 ] urllib3.connectionpool - DEBUG - https://docs.langchain.com:443 "GET /oss/python/langchain/overview HTTP/1.1" 200 None
+[ 2026-09-07 08:24:06,947 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-07 08:24:07,124 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 1/1 – short elems/total: 1/1
+[ 2026-09-07 08:24:07,125 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 1/1 – short elems/total: 1/1
+[ 2026-09-07 08:24:07,126 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 55/119 – short elems/total: 0/3
+[ 2026-09-07 08:24:07,126 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:24:07,126 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:24:07,127 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 37/42 – short elems/total: 0/2
+[ 2026-09-07 08:24:07,127 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 37/42 – short elems/total: 0/2
+[ 2026-09-07 08:24:07,128 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:24:07,129 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:24:07,129 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:24:07,129 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'div', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-07 08:24:07,130 ] trafilatura.main_extractor - DEBUG - (.//*[self::article or self::div or self::main or self::section][ @id='content' or @class='content' or re:test(@id, 'content-main|content-body|contentBody') or re:test(@class, 'content[-_]main|content(?:-|__)body') or contains(translate(@id, 'CM','cm'), 'main-content') or contains(translate(@class, 'CM','cm'), 'main-content') or contains(translate(@class, 'CP','cp'), 'page-content') ])[1]
+[ 2026-09-07 08:24:07,174 ] trafilatura.readability_lxml - DEBUG - Top 5: div 41.0
+[ 2026-09-07 08:24:07,174 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:24:07,174 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:24:07,175 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:24:07,175 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:24:07,179 ] trafilatura.external - DEBUG - extracted length: 628 (algorithm) 1479 (extraction)
+[ 2026-09-07 08:24:07,180 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-07 08:24:07,279 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 1/1 – short elems/total: 1/1
+[ 2026-09-07 08:24:07,280 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 1/1 – short elems/total: 1/1
+[ 2026-09-07 08:24:07,281 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 55/119 – short elems/total: 0/3
+[ 2026-09-07 08:24:07,281 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:24:07,281 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:24:07,281 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 37/42 – short elems/total: 0/2
+[ 2026-09-07 08:24:07,281 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 37/42 – short elems/total: 0/2
+[ 2026-09-07 08:24:07,282 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:24:07,282 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:24:07,282 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 18/77 – short elems/total: 0/1
+[ 2026-09-07 08:24:07,283 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'div', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-07 08:24:07,283 ] trafilatura.main_extractor - DEBUG - (.//*[self::article or self::div or self::main or self::section][ @id='content' or @class='content' or re:test(@id, 'content-main|content-body|contentBody') or re:test(@class, 'content[-_]main|content(?:-|__)body') or contains(translate(@id, 'CM','cm'), 'main-content') or contains(translate(@class, 'CM','cm'), 'main-content') or contains(translate(@class, 'CP','cp'), 'page-content') ])[1]
+[ 2026-09-07 08:24:07,329 ] trafilatura.readability_lxml - DEBUG - Top 5: div 41.0
+[ 2026-09-07 08:24:07,329 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:24:07,330 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:24:07,330 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:24:07,330 ] trafilatura.readability_lxml - DEBUG - Top 5: div 39.0
+[ 2026-09-07 08:24:07,331 ] trafilatura.external - DEBUG - extracted length: 628 (algorithm) 1479 (extraction)
+[ 2026-09-07 08:24:07,331 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-07 08:24:07,429 ] root - INFO - Successfully extracted content using Trafilatura.
+[ 2026-09-07 08:24:07,472 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:07,473 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:24:07,473 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:07,474 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:24:07,475 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:09,079 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:24:09 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788758647-L3CzhEG7MeiAnC4qdpWO'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a373490aef97e238-MRS')])
+[ 2026-09-07 08:24:09,080 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 08:24:09,081 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:27,213 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:24:27,213 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:24:27,214 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:24:27,229 ] root - INFO - Reader Agent completed scraping.
+[ 2026-09-07 08:24:27,230 ] root - INFO - Step 3/4: Executing Writer Chain...
+[ 2026-09-07 08:24:27,336 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:27,337 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:24:27,337 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:27,338 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:24:27,338 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:28,592 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:24:28 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788758667-FNj83cdAhZob9J7DXV31'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a37349870b05e238-MRS')])
+[ 2026-09-07 08:24:28,594 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 08:24:28,594 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:47,836 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:24:47,836 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:24:47,836 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:24:47,841 ] root - INFO - Writer Chain completed drafting report.
+[ 2026-09-07 08:24:47,842 ] root - INFO - Step 4/4: Executing Critic Chain...
+[ 2026-09-07 08:24:47,908 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:47,909 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-07 08:24:47,910 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:47,912 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-07 08:24:47,912 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:49,464 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 07 Sep 2026 05:24:49 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788758687-0sNc3OlavFYfELOrcD3u'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a3734a079b61e238-MRS')])
+[ 2026-09-07 08:24:49,464 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-07 08:24:49,464 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-07 08:24:54,881 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-07 08:24:54,881 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-07 08:24:54,882 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-07 08:24:54,887 ] root - INFO - Critic Chain completed report review.
+[ 2026-09-07 08:24:54,887 ] root - INFO - Research pipeline finished successfully.
+[ 2026-09-07 08:24:54,896 ] urllib3.connectionpool - DEBUG - Resetting dropped connection: dagshub.com
+[ 2026-09-07 08:24:55,767 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/create HTTP/1.1" 200 None
+[ 2026-09-07 08:24:56,054 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 2
+[ 2026-09-07 08:24:56,382 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/log-metric HTTP/1.1" 200 2
+[ 2026-09-07 08:24:56,711 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/log-metric HTTP/1.1" 200 2
+[ 2026-09-07 08:24:56,969 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "GET /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/get?run_uuid=58a3644bfc444a29ba62b304c4397671&run_id=58a3644bfc444a29ba62b304c4397671 HTTP/1.1" 200 None
+[ 2026-09-07 08:24:57,290 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "PUT /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow-artifacts/artifacts/21dcbab858a74ea2a3a4678a6f2b21ed/58a3644bfc444a29ba62b304c4397671/artifacts/final_report.txt HTTP/1.1" 200 2
+[ 2026-09-07 08:24:57,616 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "PUT /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow-artifacts/artifacts/21dcbab858a74ea2a3a4678a6f2b21ed/58a3644bfc444a29ba62b304c4397671/artifacts/critic_feedback.txt HTTP/1.1" 200 2
+[ 2026-09-07 08:24:57,864 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "GET /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/get?run_uuid=58a3644bfc444a29ba62b304c4397671&run_id=58a3644bfc444a29ba62b304c4397671 HTTP/1.1" 200 None
+[ 2026-09-07 08:24:58,110 ] urllib3.connectionpool - DEBUG - https://dagshub.com:443 "POST /abdallahatefhatem/LangChain-Multi-Agent-Research-System.mlflow/api/2.0/mlflow/runs/update HTTP/1.1" 200 None
+[ 2026-09-07 08:24:59,068 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.mlflow-telemetry.io:443
+[ 2026-09-07 08:24:59,757 ] urllib3.connectionpool - DEBUG - https://api.mlflow-telemetry.io:443 "POST /log HTTP/1.1" 200 30

@@ -1,0 +1,329 @@
+[ 2026-09-06 01:49:03,220 ] root - INFO - get tavily api key....
+[ 2026-09-06 01:49:03,220 ] root - INFO - used tavily api key 
+[ 2026-09-06 01:49:03,325 ] root - INFO - Loading API key for OpenRouter...
+[ 2026-09-06 01:49:03,427 ] root - INFO - LLM initialized successfully via ChatOpenRouter.
+[ 2026-09-06 01:49:03,427 ] root - INFO - building search agent ....
+[ 2026-09-06 01:49:03,428 ] root - INFO - Done build search agent
+[ 2026-09-06 01:49:03,428 ] root - INFO - building reader agent .....
+[ 2026-09-06 01:49:03,428 ] root - INFO - Done build reader agent
+[ 2026-09-06 01:49:03,428 ] root - INFO - Loading prompt configurations from YAML file...
+[ 2026-09-06 01:49:03,429 ] root - INFO - Successfully loaded prompts configuration.
+[ 2026-09-06 01:49:03,429 ] root - INFO - Successfully initialized Writer and Critic chains.
+[ 2026-09-06 01:49:03,429 ] root - INFO - Starting multi-agent research pipeline for topic: 'who is messi?'
+[ 2026-09-06 01:49:03,430 ] root - INFO - Step 1/4: Executing Search Agent...
+[ 2026-09-06 01:49:03,625 ] httpcore.connection - DEBUG - connect_tcp.started host='openrouter.ai' port=443 local_address=None timeout=5.0 socket_options=None
+[ 2026-09-06 01:49:03,722 ] httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7282f51679b0>
+[ 2026-09-06 01:49:03,722 ] httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7282f55f3950> server_hostname='openrouter.ai' timeout=5.0
+[ 2026-09-06 01:49:03,773 ] httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x7282f5a92090>
+[ 2026-09-06 01:49:03,774 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:03,774 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-06 01:49:03,774 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:03,774 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-06 01:49:03,774 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:07,831 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 22:49:07 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788648543-yfwSOUFd6XRJYov15qUa'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'set-cookie', b'__cf_bm=HrY4z5wNEB1DzOPu10_enHY69CTysp2XONBB0L9J_Zw-1788648543.8091433-1.0.1.1-LZfg2ORoOUyFt8vRBjl7tM.CXgZgUV9uIA3ROfDAbNl_mNn7j9dsR48vWeKb8f7H0cBVGC1scxr9x5n6bcKRmYTnXMHgH63RcglNObYgw_7aqDMEsBjB_ltr6SAD8nJG; HttpOnly; SameSite=None; Secure; Path=/; Domain=openrouter.ai; Expires=Sat, 05 Sep 2026 23:19:07 GMT'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a368c8f6ccb1ad9d-MRS')])
+[ 2026-09-06 01:49:07,832 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-06 01:49:07,832 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:22,495 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-06 01:49:22,495 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-06 01:49:22,495 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-06 01:49:22,500 ] root - INFO - Search Agent completed successfully.
+[ 2026-09-06 01:49:22,500 ] root - INFO - Step 2/4: Executing Reader Agent (Scraping)...
+[ 2026-09-06 01:49:22,518 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:22,519 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-06 01:49:22,519 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:22,519 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-06 01:49:22,519 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:23,603 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 22:49:23 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788648562-gXSNn6CsDOHPEGl3zGE5'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a368c96bfcc3ad9d-MRS')])
+[ 2026-09-06 01:49:23,603 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-06 01:49:23,604 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:24,179 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-06 01:49:24,180 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-06 01:49:24,180 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-06 01:49:24,187 ] root - INFO - Starting URL scraping for: https://en.wikipedia.org/wiki/Lionel_Messi
+[ 2026-09-06 01:49:24,187 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-06 01:49:24,191 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
+[ 2026-09-06 01:49:24,192 ] root - INFO - Starting URL scraping for: https://www.britannica.com/biography/Lionel-Messi
+[ 2026-09-06 01:49:24,192 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-06 01:49:24,193 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.britannica.com:443
+[ 2026-09-06 01:49:24,361 ] urllib3.connectionpool - DEBUG - https://en.wikipedia.org:443 "GET /wiki/Lionel_Messi HTTP/1.1" 200 375531
+[ 2026-09-06 01:49:24,397 ] urllib3.connectionpool - DEBUG - https://www.britannica.com:443 "GET /biography/Lionel-Messi HTTP/1.1" 403 None
+[ 2026-09-06 01:49:24,401 ] root - ERROR - HTTP error occurred while scraping https://www.britannica.com/biography/Lionel-Messi: 403 Client Error: Forbidden for url: https://www.britannica.com/biography/Lionel-Messi
+[ 2026-09-06 01:49:24,574 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-06 01:49:25,523 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 33/103 – short elems/total: 1/3
+[ 2026-09-06 01:49:25,523 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 19/85 – short elems/total: 1/2
+[ 2026-09-06 01:49:25,537 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 46/53 – short elems/total: 4/5
+[ 2026-09-06 01:49:25,537 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 48/56 – short elems/total: 4/6
+[ 2026-09-06 01:49:25,537 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 33/35 – short elems/total: 1/2
+[ 2026-09-06 01:49:25,537 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 17/19 – short elems/total: 1/2
+[ 2026-09-06 01:49:25,537 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 53/63 – short elems/total: 4/7
+[ 2026-09-06 01:49:25,537 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 104/124 – short elems/total: 4/7
+[ 2026-09-06 01:49:25,550 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 4/13 – short elems/total: 1/1
+[ 2026-09-06 01:49:25,550 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 8/27 – short elems/total: 2/2
+[ 2026-09-06 01:49:25,550 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 11/22 – short elems/total: 3/3
+[ 2026-09-06 01:49:25,550 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 8/21 – short elems/total: 2/2
+[ 2026-09-06 01:49:25,550 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 8/21 – short elems/total: 2/2
+[ 2026-09-06 01:49:25,550 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 8/17 – short elems/total: 2/2
+[ 2026-09-06 01:49:25,593 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 33/103 – short elems/total: 1/3
+[ 2026-09-06 01:49:25,630 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 4/13 – short elems/total: 1/1
+[ 2026-09-06 01:49:25,643 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-06 01:49:25,650 ] trafilatura.main_extractor - DEBUG - discarding element: header None
+[ 2026-09-06 01:49:25,650 ] trafilatura.main_extractor - DEBUG - discarding element: nav None
+[ 2026-09-06 01:49:25,650 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,650 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,650 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,650 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: nav None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: nav None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: div Appearance
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,651 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,652 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,652 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,652 ] trafilatura.main_extractor - DEBUG - discarding element: div — Newell's Old Boys youth coach Adrián Coria, sharing his first impression of the 12-year-old Messi[37]
+[ 2026-09-06 01:49:25,652 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,652 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,652 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,652 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,652 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,652 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,652 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,652 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,652 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,652 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,653 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,653 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,653 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,653 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,653 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,653 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,653 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,653 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,653 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,653 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,653 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,653 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,654 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,654 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,654 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,654 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,654 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,654 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,654 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,654 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,654 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,654 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,654 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,654 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,655 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,655 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,655 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,655 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,655 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,655 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,655 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,655 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,655 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,655 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,655 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,655 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,655 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,656 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,656 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,656 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,656 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,656 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,656 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,656 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,656 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,656 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,656 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,656 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,656 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,657 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,657 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,657 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,657 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,657 ] trafilatura.main_extractor - DEBUG - discarding element: table None
+[ 2026-09-06 01:49:25,657 ] trafilatura.main_extractor - DEBUG - discarding element: caption Appearances and goals by club, season and competition
+[ 2026-09-06 01:49:25,657 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,657 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,657 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,657 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,657 ] trafilatura.main_extractor - DEBUG - discarding element: table None
+[ 2026-09-06 01:49:25,657 ] trafilatura.main_extractor - DEBUG - discarding element: caption Appearances and goals by national team, year and competition
+[ 2026-09-06 01:49:25,657 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,657 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,658 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,658 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,658 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,658 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,658 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,658 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,658 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,658 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,660 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,660 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,660 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,668 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,668 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:25,668 ] trafilatura.main_extractor - DEBUG - discarding element: div None
+[ 2026-09-06 01:49:25,669 ] trafilatura.main_extractor - DEBUG - (.//*[self::article or self::div or self::main or self::section][ @id='content' or @class='content' or re:test(@id, 'content-main|content-body|contentBody') or re:test(@class, 'content[-_]main|content(?:-|__)body') or contains(translate(@id, 'CM','cm'), 'main-content') or contains(translate(@class, 'CM','cm'), 'main-content') or contains(translate(@class, 'CP','cp'), 'page-content') ])[1]
+[ 2026-09-06 01:49:26,120 ] trafilatura.readability_lxml - DEBUG - Top 5: section 108.28062551724139
+[ 2026-09-06 01:49:26,120 ] trafilatura.readability_lxml - DEBUG - Top 5: div 99.27522046506789
+[ 2026-09-06 01:49:26,120 ] trafilatura.readability_lxml - DEBUG - Top 5: section 81.98971405060688
+[ 2026-09-06 01:49:26,120 ] trafilatura.readability_lxml - DEBUG - Top 5: section 80.38417147493689
+[ 2026-09-06 01:49:26,120 ] trafilatura.readability_lxml - DEBUG - Top 5: section 69.58166098807496
+[ 2026-09-06 01:49:26,123 ] trafilatura.readability_lxml - DEBUG - Removed 51.884 section with weight 0 cause it has too many links 0.310 for its weight 0.
+[ 2026-09-06 01:49:26,123 ] trafilatura.readability_lxml - DEBUG - Removed  5.812 div with weight 0 cause it has too many links 0.224 for its weight 0.
+[ 2026-09-06 01:49:26,123 ] trafilatura.readability_lxml - DEBUG - Removed 47.554 div with weight 0 cause it has too many links 0.462 for its weight 0.
+[ 2026-09-06 01:49:26,123 ] trafilatura.readability_lxml - DEBUG - Removed 39.995 div with weight 0 cause it has too many links 0.600 for its weight 0.
+[ 2026-09-06 01:49:26,124 ] trafilatura.readability_lxml - DEBUG - Removed 64.282 div with weight 0 cause it has too many links 0.763 for its weight 0.
+[ 2026-09-06 01:49:26,124 ] trafilatura.readability_lxml - DEBUG - Removed  7.590 div with weight 0 cause it has too many links 0.293 for its weight 0.
+[ 2026-09-06 01:49:26,124 ] trafilatura.readability_lxml - DEBUG - Removed  0.000 table with weight 0 cause it has too many links 0.562 for its weight 0.
+[ 2026-09-06 01:49:26,124 ] trafilatura.readability_lxml - DEBUG - Removed  0.000 div with weight 0 cause it has too many links 0.321 for its weight 0.
+[ 2026-09-06 01:49:26,124 ] trafilatura.readability_lxml - DEBUG - Removed 49.475 table with weight 0 cause it has too many links 0.264 for its weight 0.
+[ 2026-09-06 01:49:26,124 ] trafilatura.readability_lxml - DEBUG - Removed 49.475 div with weight 0 cause it has too many links 0.328 for its weight 0.
+[ 2026-09-06 01:49:26,136 ] trafilatura.external - DEBUG - extracted length: 46634 (algorithm) 154570 (extraction)
+[ 2026-09-06 01:49:26,136 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-06 01:49:26,228 ] root - INFO - Successfully extracted content using Trafilatura.
+[ 2026-09-06 01:49:26,254 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:26,255 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-06 01:49:26,255 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:26,255 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-06 01:49:26,255 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:27,279 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 22:49:27 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788648566-KAmOHlLJ7nveteucxFJi'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a368c9834a3fad9d-MRS')])
+[ 2026-09-06 01:49:27,279 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-06 01:49:27,280 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:27,784 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-06 01:49:27,784 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-06 01:49:27,784 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-06 01:49:27,791 ] root - INFO - Starting URL scraping for: https://www.fifa.com/fifaplus/en/articles/lionel-messi-profile-career
+[ 2026-09-06 01:49:27,791 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-06 01:49:27,792 ] root - INFO - Starting URL scraping for: https://www.bbc.com/sport/football/players/messi
+[ 2026-09-06 01:49:27,792 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-06 01:49:27,793 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.fifa.com:443
+[ 2026-09-06 01:49:27,793 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.bbc.com:443
+[ 2026-09-06 01:49:28,129 ] urllib3.connectionpool - DEBUG - https://www.fifa.com:443 "GET /fifaplus/en/articles/lionel-messi-profile-career HTTP/1.1" 301 0
+[ 2026-09-06 01:49:28,242 ] urllib3.connectionpool - DEBUG - https://www.bbc.com:443 "GET /sport/football/players/messi HTTP/1.1" 404 15395
+[ 2026-09-06 01:49:28,251 ] root - ERROR - HTTP error occurred while scraping https://www.bbc.com/sport/football/players/messi: 404 Client Error: Not Found for url: https://www.bbc.com/sport/football/players/messi
+[ 2026-09-06 01:49:28,495 ] urllib3.connectionpool - DEBUG - https://www.fifa.com:443 "GET /en/articles/lionel-messi-profile-career HTTP/1.1" 200 1884
+[ 2026-09-06 01:49:28,496 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-06 01:49:28,497 ] trafilatura.main_extractor - DEBUG - Recovering wild text elements
+[ 2026-09-06 01:49:28,497 ] trafilatura.readability_lxml - DEBUG - Ended up stripping too much - going for a safer parse
+[ 2026-09-06 01:49:28,497 ] trafilatura.readability_lxml - DEBUG - Ruthless and lenient parsing did not work. Returning raw html
+[ 2026-09-06 01:49:28,497 ] trafilatura.external - DEBUG - extracted length: 0 (algorithm) 0 (extraction)
+[ 2026-09-06 01:49:28,497 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-06 01:49:28,497 ] trafilatura.external - DEBUG - unclean document triggering justext examination: None
+[ 2026-09-06 01:49:28,714 ] trafilatura.core - DEBUG - non-clean extracted length: 0 (extraction)
+[ 2026-09-06 01:49:28,714 ] trafilatura.core - DEBUG - text and comments not long enough: 0 0 None
+[ 2026-09-06 01:49:28,714 ] trafilatura.core - WARNING - discarding data: None
+[ 2026-09-06 01:49:28,715 ] root - INFO - Strategy 1 insufficient. Attempting Strategy 2: Readability...
+[ 2026-09-06 01:49:28,716 ] readability.readability - INFO - ruthless removal did not work. 
+[ 2026-09-06 01:49:28,716 ] readability.readability - DEBUG - ended up stripping too much - going for a safer _parse
+[ 2026-09-06 01:49:28,717 ] readability.readability - DEBUG - Ruthless and lenient parsing did not work. Returning raw html
+[ 2026-09-06 01:49:28,717 ] root - INFO - Strategy 2 insufficient. Attempting Strategy 3: BeautifulSoup Fallback...
+[ 2026-09-06 01:49:28,719 ] root - WARNING - Failed to extract meaningful content using all strategies.
+[ 2026-09-06 01:49:28,744 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:28,744 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-06 01:49:28,744 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:28,744 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-06 01:49:28,744 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:30,217 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 22:49:30 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788648568-lMyxCYvwd3mghyj46spe'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a368c992db50ad9d-MRS')])
+[ 2026-09-06 01:49:30,218 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-06 01:49:30,218 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:30,712 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-06 01:49:30,712 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-06 01:49:30,713 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-06 01:49:30,725 ] root - INFO - Starting URL scraping for: https://www.transfermarkt.com/lionel-messi/profil/spieler/28003
+[ 2026-09-06 01:49:30,726 ] root - INFO - Sending GET request to target URL...
+[ 2026-09-06 01:49:30,728 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): www.transfermarkt.com:443
+[ 2026-09-06 01:49:30,909 ] urllib3.connectionpool - DEBUG - https://www.transfermarkt.com:443 "GET /lionel-messi/profil/spieler/28003 HTTP/1.1" 200 None
+[ 2026-09-06 01:49:30,923 ] root - INFO - Attempting Strategy 1: Trafilatura extraction...
+[ 2026-09-06 01:49:30,954 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 52/174 – short elems/total: 0/3
+[ 2026-09-06 01:49:30,955 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 52/174 – short elems/total: 0/3
+[ 2026-09-06 01:49:30,956 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'div', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-06 01:49:30,969 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 5/9 – short elems/total: 5/5
+[ 2026-09-06 01:49:30,970 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 8/82 – short elems/total: 2/2
+[ 2026-09-06 01:49:30,970 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 8/82 – short elems/total: 2/2
+[ 2026-09-06 01:49:30,970 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 15/168 – short elems/total: 3/3
+[ 2026-09-06 01:49:30,971 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 31/31 – short elems/total: 0/1
+[ 2026-09-06 01:49:30,972 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 27/78 – short elems/total: 0/2
+[ 2026-09-06 01:49:30,972 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 27/58 – short elems/total: 0/2
+[ 2026-09-06 01:49:30,972 ] trafilatura.htmlprocessing - DEBUG - list link text/total: 27/28 – short elems/total: 0/2
+[ 2026-09-06 01:49:30,973 ] trafilatura.main_extractor - DEBUG - ['blockquote', 'code', 'del', 'div', 'head', 'hi', 'lb', 'list', 'p', 'pre', 'quote']
+[ 2026-09-06 01:49:30,973 ] trafilatura.main_extractor - DEBUG - discarding element: tm-quick-select None
+[ 2026-09-06 01:49:30,973 ] trafilatura.main_extractor - DEBUG - discarding element: main None
+[ 2026-09-06 01:49:30,973 ] trafilatura.main_extractor - DEBUG - discarding element: tm-consent None
+[ 2026-09-06 01:49:30,974 ] trafilatura.main_extractor - DEBUG - discarding element: header None
+[ 2026-09-06 01:49:30,975 ] trafilatura.main_extractor - DEBUG - discarding element: tm-watchlist None
+[ 2026-09-06 01:49:30,975 ] trafilatura.main_extractor - DEBUG - discarding element: tm-subnavigation None
+[ 2026-09-06 01:49:30,975 ] trafilatura.main_extractor - DEBUG - discarding element: tm-player-performance-proxy None
+[ 2026-09-06 01:49:30,975 ] trafilatura.main_extractor - DEBUG - discarding element: tm-market-value-development-graph-integrated None
+[ 2026-09-06 01:49:30,976 ] trafilatura.main_extractor - DEBUG - discarding element: section None
+[ 2026-09-06 01:49:30,976 ] trafilatura.main_extractor - DEBUG - discarding element: tm-consent None
+[ 2026-09-06 01:49:30,976 ] trafilatura.main_extractor - DEBUG - discarding element: tm-absences None
+[ 2026-09-06 01:49:30,976 ] trafilatura.main_extractor - DEBUG - discarding element: tm-player-transfer-history None
+[ 2026-09-06 01:49:30,976 ] trafilatura.main_extractor - DEBUG - discarding element: tm-player-performance-proxy None
+[ 2026-09-06 01:49:30,976 ] trafilatura.main_extractor - DEBUG - discarding element: tm-player-performance-table-new None
+[ 2026-09-06 01:49:30,976 ] trafilatura.main_extractor - DEBUG - discarding element: tm-consent None
+[ 2026-09-06 01:49:30,976 ] trafilatura.main_extractor - DEBUG - (.//*[self::article or self::div or self::section][ starts-with(@class, 'main') or starts-with(@id, 'main') or starts-with(@role, 'main')])[1]|(.//main)[1]
+[ 2026-09-06 01:49:30,984 ] trafilatura.readability_lxml - DEBUG - Top 5: div 25.858390804597693
+[ 2026-09-06 01:49:30,985 ] trafilatura.readability_lxml - DEBUG - Top 5: div 17.258448275862072
+[ 2026-09-06 01:49:30,985 ] trafilatura.readability_lxml - DEBUG - Top 5: div 8.54
+[ 2026-09-06 01:49:30,985 ] trafilatura.readability_lxml - DEBUG - Top 5: div 6.1777319587628865
+[ 2026-09-06 01:49:30,985 ] trafilatura.readability_lxml - DEBUG - Top 5: div 6.065154241645244
+[ 2026-09-06 01:49:30,985 ] trafilatura.readability_lxml - DEBUG - Removed  0.000 div with weight 0 cause it has too many links 0.299 for its weight 0.
+[ 2026-09-06 01:49:30,985 ] trafilatura.external - DEBUG - extracted length: 174 (algorithm) 2829 (extraction)
+[ 2026-09-06 01:49:30,985 ] trafilatura.external - DEBUG - using custom extraction: None
+[ 2026-09-06 01:49:31,002 ] root - INFO - Successfully extracted content using Trafilatura.
+[ 2026-09-06 01:49:31,053 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:31,053 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-06 01:49:31,054 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:31,054 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-06 01:49:31,054 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:32,617 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 22:49:32 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788648571-h886WfTX93kR5BJVyz5I'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a368c9a14b9dad9d-MRS')])
+[ 2026-09-06 01:49:32,618 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-06 01:49:32,618 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:39,955 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-06 01:49:39,955 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-06 01:49:39,956 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-06 01:49:39,963 ] root - INFO - Reader Agent completed scraping.
+[ 2026-09-06 01:49:39,963 ] root - INFO - Step 3/4: Executing Writer Chain...
+[ 2026-09-06 01:49:40,007 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:40,007 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-06 01:49:40,007 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:40,007 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-06 01:49:40,008 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:41,459 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 22:49:41 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788648580-mfsPzjIF6acl9qzrtNav'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a368c9d94a7aad9d-MRS')])
+[ 2026-09-06 01:49:41,459 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-06 01:49:41,459 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:51,859 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-06 01:49:51,859 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-06 01:49:51,860 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-06 01:49:51,864 ] root - INFO - Writer Chain completed drafting report.
+[ 2026-09-06 01:49:51,864 ] root - INFO - Step 4/4: Executing Critic Chain...
+[ 2026-09-06 01:49:51,906 ] httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:51,906 ] httpcore.http11 - DEBUG - send_request_headers.complete
+[ 2026-09-06 01:49:51,906 ] httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:51,906 ] httpcore.http11 - DEBUG - send_request_body.complete
+[ 2026-09-06 01:49:51,906 ] httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:53,019 ] httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sat, 05 Sep 2026 22:49:53 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Access-Control-Allow-Origin', b'*'), (b'X-Generation-Id', b'gen-1788648591-CVAPrxocTca3tnOyDpSc'), (b'access-control-expose-headers', b'X-Generation-Id,X-Provider-Name,request-id,cf-ray'), (b'Permissions-Policy', b'payment=(self "https://checkout.stripe.com" "https://connect-js.stripe.com" "https://js.stripe.com" "https://*.js.stripe.com" "https://hooks.stripe.com")'), (b'Referrer-Policy', b'no-referrer, strict-origin-when-cross-origin'), (b'X-Content-Type-Options', b'nosniff'), (b'Content-Encoding', b'gzip'), (b'Server', b'cloudflare'), (b'CF-RAY', b'a368ca23a887ad9d-MRS')])
+[ 2026-09-06 01:49:53,020 ] httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2026-09-06 01:49:53,020 ] httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+[ 2026-09-06 01:49:55,939 ] httpcore.http11 - DEBUG - receive_response_body.complete
+[ 2026-09-06 01:49:55,939 ] httpcore.http11 - DEBUG - response_closed.started
+[ 2026-09-06 01:49:55,940 ] httpcore.http11 - DEBUG - response_closed.complete
+[ 2026-09-06 01:49:55,949 ] root - INFO - Critic Chain completed report review.
+[ 2026-09-06 01:49:55,950 ] root - INFO - Research pipeline finished successfully.
